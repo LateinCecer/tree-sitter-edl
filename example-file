@@ -1,0 +1,8 @@
+mod foo;
+
+let u: std::field::BoundaryField<f64, DIM, DIM> = std::field::BoundaryField::<f64, _, _>::zeros::<NSIZE>(domain);;
+let _ = field.as_device_ptr();
+let _ = field.grad::<LEAST_SQUARES>(domain, -1.0, u_grad);
+
+
+

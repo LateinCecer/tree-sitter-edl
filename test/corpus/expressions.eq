@@ -40,7 +40,7 @@ let _ = 1;
 Number Literal 2
 ================
 
-let _ = 1.;
+let _ = 1.0;
 
 ---
 
@@ -96,7 +96,7 @@ let _ = 1usize;
 Number Literal 6
 ================
 
-let _ = 9.f64;
+let _ = 9.12345678f64;
 
 ---
 
@@ -181,7 +181,7 @@ let _ = 1.0e3_f64;
 Number Literal 12
 =================
 
-let _ = 1.e3_f64;
+let _ = 1.1e3_f64;
 
 ---
 
@@ -241,7 +241,7 @@ Field on number with hint
 =========================
 
 let _ = 5_usize.field;
-let _ = 5.e-3.field;
+let _ = 5.2e-3.field;
 
 ---
 
@@ -286,5 +286,70 @@ let _ = var.method::<f32, 2>(a, 2.3);
                 (call_params
                     (var_expr)
                     (num_literal))))))
+
+===============
+Prefix Operator
+===============
+
+let _ = !0;
+let _ = -3.14159265;
+
+---
+
+(document
+    (item
+        (let
+            (var_name)
+            (inv_op
+                (num_literal))))
+    (item
+        (let
+            (var_name)
+            (unary_op
+                (num_literal)))))
+
+
+==============
+Range operator
+==============
+
+let _ = 0..2;
+let _ = 0..=1;
+
+---
+
+(document
+    (item
+        (let
+            (var_name)
+            (num_literal)
+            (range_op
+                (num_literal))))
+    (item
+        (let
+            (var_name)
+            (num_literal)
+            (range_incl_op
+                (num_literal)))))
+
+
+==========
+Test Binop
+==========
+
+let _ = a + 2.0 * b;
+
+---
+
+(document
+    (item
+        (let
+            (var_name)
+            (binop_add
+                (var_expr)
+                (binop_mul
+                    (num_literal)
+                    (var_expr))))))
+
 
 

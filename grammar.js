@@ -7,41 +7,167 @@ module.exports = grammar({
         // resources: https://tree-sitter.github.io/tree-sitter/creating-parsers
         document: ($) => seq(repeat("\n"), repeat($.item)),
 
-        item: ($) => seq(choice(
-            $.mod,
-            $.use,
-            $.let,
-        ), repeat("\n")),
+        item: ($) => seq(
+            choice(
+                $.doc_comment,
+                $.infix_comment,
+                $.line_comment,
+                $.mod,
+                $.use,
+                seq($.let, ";"),
+                seq($.const, ";"),
+                $.fn_def,
+                $.fn_extern,
+            ),
+            repeat("\n")
+        ),
+
+        _comment: ($) => repeat1(choice(
+            $.doc_comment,
+            $.infix_comment,
+            $.line_comment
+        )),
+        _inline_comment: ($) => repeat1($.line_comment),
 
         mod: ($) => seq("mod", $._ident, $._close),
         use: ($) => seq("use", $._qual, $._close),
         env: ($) => choice(
             "<>",
-            seq("<", seq($._ident, repeat(seq(",", $._ident))), optional(","), ">"),
-            seq("<", seq($._ident, repeat(seq(",", $._ident))), ",", seq($._generic_const_def, repeat(seq(",", $._generic_const_def))), optional(","), ">"),
-            seq("<", seq($._generic_const_def, repeat(seq(",", $._generic_const_def))), optional(","), ">"),
+            seq(
+                "<",
+                seq(
+                    optional($._inline_comment),
+                    $._ident,
+                    repeat(seq(",", $._ident))
+                ),
+                optional(","), ">"
+            ),
+            seq(
+                "<",
+                seq(
+                    optional($._inline_comment),
+                    $._ident,
+                    repeat(seq(",", optional($._inline_comment), $._ident))
+                ),
+                ",",
+                seq(
+                    optional($._inline_comment),
+                    $._generic_const_def,
+                    repeat(seq(",", optional($._inline_comment), $._generic_const_def))
+                ),
+                optional(","),
+                ">"
+            ),
+            seq(
+                "<",
+                seq(
+                    optional($._inline_comment),
+                    $._generic_const_def,
+                    repeat(seq(",", optional($._inline_comment), $._generic_const_def))
+                ),
+                optional(","),
+                ">"
+            ),
         ),
         env_def: ($) => seq(
             "<",
-            optional(seq($._primary_expr, repeat(seq(",", $._primary_expr)), optional(","))),
+            optional(seq(
+                $._primary_expr,
+                repeat(seq(
+                    optional($._inline_comment),
+                    ",",
+                    $._primary_expr
+                )),
+                optional(",")
+            )),
             ">",
         ),
 
         let: ($) => seq(
             "let",
-            optional("mut"),
+            optional($.qual_mut),
             $.var_name,
             optional(seq(":", $.type)),
             "=",
             $._expr,
-            repeat1(";"),
+        ),
+
+        const: ($) => seq(
+            "const",
+            $.var_name,
+            ":",
+            $.type,
+            "=",
+            $._expr,
         ),
 
         var_name: ($) => $._ident,
         var_expr: ($) => $._ident,
 
+        fn_def: ($) => seq($.fn_signature, $.block_expr),
+        fn_extern: ($) => seq($.qual_external, $.fn_signature, ";"),
 
+        /* function signature */
+        fn_signature: ($) => seq(
+            repeat(seq(choice(
+                $.qual_comptime,
+                $.qual_maybe_comptime
+            ), optional($._inline_comment))),
+            "fn",
+            $.var_func_name,
+            optional($.env_def),
+            $.fn_params,
+            optional(seq("->", $.type)),
+            optional(seq("where"))
+        ),
+
+        var_func_name: ($) => $._ident,
+        
+        /* function parameter list (for function signature definitions) */
+        fn_params: ($) => seq(
+            "(",
+            optional(
+                choice(
+                    seq($.self_param, repeat(seq(",", $.fn_param)), optional(",")),
+                    seq($.fn_param, repeat(seq(",", $.fn_param)), optional(",")),    
+                )
+            ),
+            ")",
+        ),
+
+        /* function parameter */
+        fn_param: ($) => seq(
+            repeat(choice(
+                $.qual_mut,
+                $.qual_comptime
+            )),
+            $.var_name,
+            optional($._inline_comment),
+            ":",
+            optional($._inline_comment),
+            $.type,
+        ),
+
+        /* `self`-parameter (with optional mutability qualifier) */
+        self_param: ($) => seq(
+            optional($.qual_mut),
+            "self"
+        ),
+
+    
+        /* binary expressions */
         _expr: ($) => choice(
+            $._non_closing_expr,
+            $._self_closing_expr,
+        ),
+
+        _self_closing_expr: ($) => choice(
+            $.if_expr,
+            $.loop_expr,
+            $.block_expr,
+        ),
+
+        _non_closing_expr: ($) => choice(
             $.binop_mul,
             $.binop_div,
             $.binop_rem,
@@ -89,6 +215,11 @@ module.exports = grammar({
             $.binop_set_or,
             $.binop_set_xor,
             $.binop_set_rem,
+
+            $.return_expr,
+            $.break_expr,
+            $.continue_expr,
+            $.let,
 
             $.__prim,
         ),
@@ -174,12 +305,96 @@ module.exports = grammar({
             )),
             prec(3, optional(choice($.range_op, $.range_incl_op))),
             /* we can put trailing expressions here, like fields, method calls or index operators */
-            prec(1, repeat(choice(
+            prec(1, repeat(seq(optional($._inline_comment), choice(
                 $.field_expr,
                 $.method_expr,
                 $.index_expr,
-            ))),
+            )))),
         )),
+
+        block_expr: ($) => seq(
+            "{",
+            repeat(seq(choice(
+                /* ifs, loops and blocks do not need a closing `;` */
+                // seq($._self_closing_expr),
+                /* normal expressions need a closing `;` if they are used as a statement */
+                seq($._non_closing_expr, ";"),
+            ), repeat(";"))),
+            /* blocks can, but do not have to, close with either a clean expression (without closing `;`),
+               or by an early-return expression (using the `ret` keyword) */
+            //optional($._inline_comment),
+            //optional(choice(
+            //    $.return_expr, 
+            //    $._non_closing_expr,
+            //)),
+            "}",
+        ),
+
+        loop_expr: ($) => seq(
+            "loop",
+            optional($._inline_comment),
+            $.block_expr,
+        ),
+
+        comptime_block: ($) => seq(
+            $.comptime_block,
+            optional($._inline_comment),
+            $.block_expr,
+        ),
+
+        if_statement: ($) => seq(
+            "if",
+            $._expr,
+            optional($._inline_comment),
+            $.block_expr,
+            repeat(seq(
+                optional($._inline_comment),
+                "else",
+                optional($._inline_comment),
+                "if",
+                $._expr,
+                optional($._inline_comment),
+                $.block_expr,
+            )),
+            optional(seq(
+                optional($._inline_comment),
+                "else",
+                optional($._inline_comment),
+                $.block_expr,
+            )),
+        ),
+
+        if_expr: ($) => seq(
+            "if",
+            $._expr,
+            optional($._inline_comment),
+            $.block_expr,
+            repeat(seq(
+                optional($._inline_comment),
+                "else",
+                optional($._inline_comment),
+                "if",
+                $._expr,
+                optional($._inline_comment),
+                $.block_expr,
+            )),
+            optional($._inline_comment),
+            "else",
+            optional($._inline_comment),
+            $.block_expr,
+        ),
+
+        return_expr: ($) => prec.left(seq(
+            "ret",
+            optional($._expr),
+        )),
+
+        break_expr: ($) => prec.left(seq(
+            "break",
+            optional($._expr),
+        )),
+
+        continue_expr: ($) => "continue",
 
         field_expr: ($) => seq(".", $._ident),
         method_expr: ($) => seq(".", $._ident, optional(seq("::", $.env_def)), $.call_params),
@@ -196,11 +411,13 @@ module.exports = grammar({
 
         call_params: ($) => seq(
             "(",
-            seq($._expr, repeat(seq(
+            seq(optional($._inline_comment), $._expr, repeat(seq(
                 ",",
+                optional($._inline_comment),
                 $._expr,
             ))),
             optional(","),
+            optional($._inline_comment),
             ")",
         ),
 
@@ -236,6 +453,21 @@ module.exports = grammar({
             repeat("_"),
             optional($._number_type_hint),
         )),
+
+        qual_mut: ($) => "mut",
+        qual_const: ($) => "const",
+        qual_comptime: ($) => "comptime",
+        qual_maybe_comptime: ($) => "?comptime",
+        qual_external: ($) => seq("external"),
+
+        string: ($) => /"(\\"|[^"\n])*"/,
+        string_block: ($) => /r#"[^("#)\n]*"#/,
+
+        line_comment: ($) => seq("//", $._till_line_end),
+        doc_comment: ($) => seq("///", $._till_line_end),
+        infix_comment: ($) => seq("//!", $._till_line_end),
+
+        _till_line_end: ($) => /([^\n])*/,
 
         _number_type_hint: ($) => choice(
             "i8",

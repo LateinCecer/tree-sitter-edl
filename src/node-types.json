@@ -168,6 +168,18 @@
           "named": true
         },
         {
+          "type": "block_expr",
+          "named": true
+        },
+        {
+          "type": "break_expr",
+          "named": true
+        },
+        {
+          "type": "continue_expr",
+          "named": true
+        },
+        {
           "type": "field_expr",
           "named": true
         },
@@ -176,11 +188,27 @@
           "named": true
         },
         {
+          "type": "if_expr",
+          "named": true
+        },
+        {
           "type": "index_expr",
           "named": true
         },
         {
           "type": "inv_op",
+          "named": true
+        },
+        {
+          "type": "let",
+          "named": true
+        },
+        {
+          "type": "line_comment",
+          "named": true
+        },
+        {
+          "type": "loop_expr",
           "named": true
         },
         {
@@ -197,6 +225,10 @@
         },
         {
           "type": "range_op",
+          "named": true
+        },
+        {
+          "type": "return_expr",
           "named": true
         },
         {
@@ -379,6 +411,18 @@
           "named": true
         },
         {
+          "type": "block_expr",
+          "named": true
+        },
+        {
+          "type": "break_expr",
+          "named": true
+        },
+        {
+          "type": "continue_expr",
+          "named": true
+        },
+        {
           "type": "field_expr",
           "named": true
         },
@@ -387,11 +431,27 @@
           "named": true
         },
         {
+          "type": "if_expr",
+          "named": true
+        },
+        {
           "type": "index_expr",
           "named": true
         },
         {
           "type": "inv_op",
+          "named": true
+        },
+        {
+          "type": "let",
+          "named": true
+        },
+        {
+          "type": "line_comment",
+          "named": true
+        },
+        {
+          "type": "loop_expr",
           "named": true
         },
         {
@@ -408,6 +468,10 @@
         },
         {
           "type": "range_op",
+          "named": true
+        },
+        {
+          "type": "return_expr",
           "named": true
         },
         {
@@ -590,6 +654,18 @@
           "named": true
         },
         {
+          "type": "block_expr",
+          "named": true
+        },
+        {
+          "type": "break_expr",
+          "named": true
+        },
+        {
+          "type": "continue_expr",
+          "named": true
+        },
+        {
           "type": "field_expr",
           "named": true
         },
@@ -598,11 +674,27 @@
           "named": true
         },
         {
+          "type": "if_expr",
+          "named": true
+        },
+        {
           "type": "index_expr",
           "named": true
         },
         {
           "type": "inv_op",
+          "named": true
+        },
+        {
+          "type": "let",
+          "named": true
+        },
+        {
+          "type": "line_comment",
+          "named": true
+        },
+        {
+          "type": "loop_expr",
           "named": true
         },
         {
@@ -619,6 +711,10 @@
         },
         {
           "type": "range_op",
+          "named": true
+        },
+        {
+          "type": "return_expr",
           "named": true
         },
         {
@@ -801,6 +897,18 @@
           "named": true
         },
         {
+          "type": "block_expr",
+          "named": true
+        },
+        {
+          "type": "break_expr",
+          "named": true
+        },
+        {
+          "type": "continue_expr",
+          "named": true
+        },
+        {
           "type": "field_expr",
           "named": true
         },
@@ -809,11 +917,27 @@
           "named": true
         },
         {
+          "type": "if_expr",
+          "named": true
+        },
+        {
           "type": "index_expr",
           "named": true
         },
         {
           "type": "inv_op",
+          "named": true
+        },
+        {
+          "type": "let",
+          "named": true
+        },
+        {
+          "type": "line_comment",
+          "named": true
+        },
+        {
+          "type": "loop_expr",
           "named": true
         },
         {
@@ -830,6 +954,10 @@
         },
         {
           "type": "range_op",
+          "named": true
+        },
+        {
+          "type": "return_expr",
           "named": true
         },
         {
@@ -1012,6 +1140,18 @@
           "named": true
         },
         {
+          "type": "block_expr",
+          "named": true
+        },
+        {
+          "type": "break_expr",
+          "named": true
+        },
+        {
+          "type": "continue_expr",
+          "named": true
+        },
+        {
           "type": "field_expr",
           "named": true
         },
@@ -1020,11 +1160,27 @@
           "named": true
         },
         {
+          "type": "if_expr",
+          "named": true
+        },
+        {
           "type": "index_expr",
           "named": true
         },
         {
           "type": "inv_op",
+          "named": true
+        },
+        {
+          "type": "let",
+          "named": true
+        },
+        {
+          "type": "line_comment",
+          "named": true
+        },
+        {
+          "type": "loop_expr",
           "named": true
         },
         {
@@ -1041,6 +1197,10 @@
         },
         {
           "type": "range_op",
+          "named": true
+        },
+        {
+          "type": "return_expr",
           "named": true
         },
         {
@@ -1223,6 +1383,18 @@
           "named": true
         },
         {
+          "type": "block_expr",
+          "named": true
+        },
+        {
+          "type": "break_expr",
+          "named": true
+        },
+        {
+          "type": "continue_expr",
+          "named": true
+        },
+        {
           "type": "field_expr",
           "named": true
         },
@@ -1231,11 +1403,27 @@
           "named": true
         },
         {
+          "type": "if_expr",
+          "named": true
+        },
+        {
           "type": "index_expr",
           "named": true
         },
         {
           "type": "inv_op",
+          "named": true
+        },
+        {
+          "type": "let",
+          "named": true
+        },
+        {
+          "type": "line_comment",
+          "named": true
+        },
+        {
+          "type": "loop_expr",
           "named": true
         },
         {
@@ -1252,6 +1440,10 @@
         },
         {
           "type": "range_op",
+          "named": true
+        },
+        {
+          "type": "return_expr",
           "named": true
         },
         {
@@ -1434,6 +1626,18 @@
           "named": true
         },
         {
+          "type": "block_expr",
+          "named": true
+        },
+        {
+          "type": "break_expr",
+          "named": true
+        },
+        {
+          "type": "continue_expr",
+          "named": true
+        },
+        {
           "type": "field_expr",
           "named": true
         },
@@ -1442,11 +1646,27 @@
           "named": true
         },
         {
+          "type": "if_expr",
+          "named": true
+        },
+        {
           "type": "index_expr",
           "named": true
         },
         {
           "type": "inv_op",
+          "named": true
+        },
+        {
+          "type": "let",
+          "named": true
+        },
+        {
+          "type": "line_comment",
+          "named": true
+        },
+        {
+          "type": "loop_expr",
           "named": true
         },
         {
@@ -1463,6 +1683,10 @@
         },
         {
           "type": "range_op",
+          "named": true
+        },
+        {
+          "type": "return_expr",
           "named": true
         },
         {
@@ -1645,6 +1869,18 @@
           "named": true
         },
         {
+          "type": "block_expr",
+          "named": true
+        },
+        {
+          "type": "break_expr",
+          "named": true
+        },
+        {
+          "type": "continue_expr",
+          "named": true
+        },
+        {
           "type": "field_expr",
           "named": true
         },
@@ -1653,11 +1889,27 @@
           "named": true
         },
         {
+          "type": "if_expr",
+          "named": true
+        },
+        {
           "type": "index_expr",
           "named": true
         },
         {
           "type": "inv_op",
+          "named": true
+        },
+        {
+          "type": "let",
+          "named": true
+        },
+        {
+          "type": "line_comment",
+          "named": true
+        },
+        {
+          "type": "loop_expr",
           "named": true
         },
         {
@@ -1674,6 +1926,10 @@
         },
         {
           "type": "range_op",
+          "named": true
+        },
+        {
+          "type": "return_expr",
           "named": true
         },
         {
@@ -1856,6 +2112,18 @@
           "named": true
         },
         {
+          "type": "block_expr",
+          "named": true
+        },
+        {
+          "type": "break_expr",
+          "named": true
+        },
+        {
+          "type": "continue_expr",
+          "named": true
+        },
+        {
           "type": "field_expr",
           "named": true
         },
@@ -1864,11 +2132,27 @@
           "named": true
         },
         {
+          "type": "if_expr",
+          "named": true
+        },
+        {
           "type": "index_expr",
           "named": true
         },
         {
           "type": "inv_op",
+          "named": true
+        },
+        {
+          "type": "let",
+          "named": true
+        },
+        {
+          "type": "line_comment",
+          "named": true
+        },
+        {
+          "type": "loop_expr",
           "named": true
         },
         {
@@ -1885,6 +2169,10 @@
         },
         {
           "type": "range_op",
+          "named": true
+        },
+        {
+          "type": "return_expr",
           "named": true
         },
         {
@@ -2067,6 +2355,18 @@
           "named": true
         },
         {
+          "type": "block_expr",
+          "named": true
+        },
+        {
+          "type": "break_expr",
+          "named": true
+        },
+        {
+          "type": "continue_expr",
+          "named": true
+        },
+        {
           "type": "field_expr",
           "named": true
         },
@@ -2075,11 +2375,27 @@
           "named": true
         },
         {
+          "type": "if_expr",
+          "named": true
+        },
+        {
           "type": "index_expr",
           "named": true
         },
         {
           "type": "inv_op",
+          "named": true
+        },
+        {
+          "type": "let",
+          "named": true
+        },
+        {
+          "type": "line_comment",
+          "named": true
+        },
+        {
+          "type": "loop_expr",
           "named": true
         },
         {
@@ -2096,6 +2412,10 @@
         },
         {
           "type": "range_op",
+          "named": true
+        },
+        {
+          "type": "return_expr",
           "named": true
         },
         {
@@ -2278,6 +2598,18 @@
           "named": true
         },
         {
+          "type": "block_expr",
+          "named": true
+        },
+        {
+          "type": "break_expr",
+          "named": true
+        },
+        {
+          "type": "continue_expr",
+          "named": true
+        },
+        {
           "type": "field_expr",
           "named": true
         },
@@ -2286,11 +2618,27 @@
           "named": true
         },
         {
+          "type": "if_expr",
+          "named": true
+        },
+        {
           "type": "index_expr",
           "named": true
         },
         {
           "type": "inv_op",
+          "named": true
+        },
+        {
+          "type": "let",
+          "named": true
+        },
+        {
+          "type": "line_comment",
+          "named": true
+        },
+        {
+          "type": "loop_expr",
           "named": true
         },
         {
@@ -2307,6 +2655,10 @@
         },
         {
           "type": "range_op",
+          "named": true
+        },
+        {
+          "type": "return_expr",
           "named": true
         },
         {
@@ -2489,6 +2841,18 @@
           "named": true
         },
         {
+          "type": "block_expr",
+          "named": true
+        },
+        {
+          "type": "break_expr",
+          "named": true
+        },
+        {
+          "type": "continue_expr",
+          "named": true
+        },
+        {
           "type": "field_expr",
           "named": true
         },
@@ -2497,11 +2861,27 @@
           "named": true
         },
         {
+          "type": "if_expr",
+          "named": true
+        },
+        {
           "type": "index_expr",
           "named": true
         },
         {
           "type": "inv_op",
+          "named": true
+        },
+        {
+          "type": "let",
+          "named": true
+        },
+        {
+          "type": "line_comment",
+          "named": true
+        },
+        {
+          "type": "loop_expr",
           "named": true
         },
         {
@@ -2518,6 +2898,10 @@
         },
         {
           "type": "range_op",
+          "named": true
+        },
+        {
+          "type": "return_expr",
           "named": true
         },
         {
@@ -2700,6 +3084,18 @@
           "named": true
         },
         {
+          "type": "block_expr",
+          "named": true
+        },
+        {
+          "type": "break_expr",
+          "named": true
+        },
+        {
+          "type": "continue_expr",
+          "named": true
+        },
+        {
           "type": "field_expr",
           "named": true
         },
@@ -2708,11 +3104,27 @@
           "named": true
         },
         {
+          "type": "if_expr",
+          "named": true
+        },
+        {
           "type": "index_expr",
           "named": true
         },
         {
           "type": "inv_op",
+          "named": true
+        },
+        {
+          "type": "let",
+          "named": true
+        },
+        {
+          "type": "line_comment",
+          "named": true
+        },
+        {
+          "type": "loop_expr",
           "named": true
         },
         {
@@ -2729,6 +3141,10 @@
         },
         {
           "type": "range_op",
+          "named": true
+        },
+        {
+          "type": "return_expr",
           "named": true
         },
         {
@@ -2911,6 +3327,18 @@
           "named": true
         },
         {
+          "type": "block_expr",
+          "named": true
+        },
+        {
+          "type": "break_expr",
+          "named": true
+        },
+        {
+          "type": "continue_expr",
+          "named": true
+        },
+        {
           "type": "field_expr",
           "named": true
         },
@@ -2919,11 +3347,27 @@
           "named": true
         },
         {
+          "type": "if_expr",
+          "named": true
+        },
+        {
           "type": "index_expr",
           "named": true
         },
         {
           "type": "inv_op",
+          "named": true
+        },
+        {
+          "type": "let",
+          "named": true
+        },
+        {
+          "type": "line_comment",
+          "named": true
+        },
+        {
+          "type": "loop_expr",
           "named": true
         },
         {
@@ -2940,6 +3384,10 @@
         },
         {
           "type": "range_op",
+          "named": true
+        },
+        {
+          "type": "return_expr",
           "named": true
         },
         {
@@ -3122,6 +3570,18 @@
           "named": true
         },
         {
+          "type": "block_expr",
+          "named": true
+        },
+        {
+          "type": "break_expr",
+          "named": true
+        },
+        {
+          "type": "continue_expr",
+          "named": true
+        },
+        {
           "type": "field_expr",
           "named": true
         },
@@ -3130,11 +3590,27 @@
           "named": true
         },
         {
+          "type": "if_expr",
+          "named": true
+        },
+        {
           "type": "index_expr",
           "named": true
         },
         {
           "type": "inv_op",
+          "named": true
+        },
+        {
+          "type": "let",
+          "named": true
+        },
+        {
+          "type": "line_comment",
+          "named": true
+        },
+        {
+          "type": "loop_expr",
           "named": true
         },
         {
@@ -3151,6 +3627,10 @@
         },
         {
           "type": "range_op",
+          "named": true
+        },
+        {
+          "type": "return_expr",
           "named": true
         },
         {
@@ -3333,6 +3813,18 @@
           "named": true
         },
         {
+          "type": "block_expr",
+          "named": true
+        },
+        {
+          "type": "break_expr",
+          "named": true
+        },
+        {
+          "type": "continue_expr",
+          "named": true
+        },
+        {
           "type": "field_expr",
           "named": true
         },
@@ -3341,11 +3833,27 @@
           "named": true
         },
         {
+          "type": "if_expr",
+          "named": true
+        },
+        {
           "type": "index_expr",
           "named": true
         },
         {
           "type": "inv_op",
+          "named": true
+        },
+        {
+          "type": "let",
+          "named": true
+        },
+        {
+          "type": "line_comment",
+          "named": true
+        },
+        {
+          "type": "loop_expr",
           "named": true
         },
         {
@@ -3362,6 +3870,10 @@
         },
         {
           "type": "range_op",
+          "named": true
+        },
+        {
+          "type": "return_expr",
           "named": true
         },
         {
@@ -3544,6 +4056,18 @@
           "named": true
         },
         {
+          "type": "block_expr",
+          "named": true
+        },
+        {
+          "type": "break_expr",
+          "named": true
+        },
+        {
+          "type": "continue_expr",
+          "named": true
+        },
+        {
           "type": "field_expr",
           "named": true
         },
@@ -3552,11 +4076,27 @@
           "named": true
         },
         {
+          "type": "if_expr",
+          "named": true
+        },
+        {
           "type": "index_expr",
           "named": true
         },
         {
           "type": "inv_op",
+          "named": true
+        },
+        {
+          "type": "let",
+          "named": true
+        },
+        {
+          "type": "line_comment",
+          "named": true
+        },
+        {
+          "type": "loop_expr",
           "named": true
         },
         {
@@ -3573,6 +4113,10 @@
         },
         {
           "type": "range_op",
+          "named": true
+        },
+        {
+          "type": "return_expr",
           "named": true
         },
         {
@@ -3755,6 +4299,18 @@
           "named": true
         },
         {
+          "type": "block_expr",
+          "named": true
+        },
+        {
+          "type": "break_expr",
+          "named": true
+        },
+        {
+          "type": "continue_expr",
+          "named": true
+        },
+        {
           "type": "field_expr",
           "named": true
         },
@@ -3763,11 +4319,27 @@
           "named": true
         },
         {
+          "type": "if_expr",
+          "named": true
+        },
+        {
           "type": "index_expr",
           "named": true
         },
         {
           "type": "inv_op",
+          "named": true
+        },
+        {
+          "type": "let",
+          "named": true
+        },
+        {
+          "type": "line_comment",
+          "named": true
+        },
+        {
+          "type": "loop_expr",
           "named": true
         },
         {
@@ -3784,6 +4356,10 @@
         },
         {
           "type": "range_op",
+          "named": true
+        },
+        {
+          "type": "return_expr",
           "named": true
         },
         {
@@ -3966,6 +4542,18 @@
           "named": true
         },
         {
+          "type": "block_expr",
+          "named": true
+        },
+        {
+          "type": "break_expr",
+          "named": true
+        },
+        {
+          "type": "continue_expr",
+          "named": true
+        },
+        {
           "type": "field_expr",
           "named": true
         },
@@ -3974,11 +4562,27 @@
           "named": true
         },
         {
+          "type": "if_expr",
+          "named": true
+        },
+        {
           "type": "index_expr",
           "named": true
         },
         {
           "type": "inv_op",
+          "named": true
+        },
+        {
+          "type": "let",
+          "named": true
+        },
+        {
+          "type": "line_comment",
+          "named": true
+        },
+        {
+          "type": "loop_expr",
           "named": true
         },
         {
@@ -3995,6 +4599,10 @@
         },
         {
           "type": "range_op",
+          "named": true
+        },
+        {
+          "type": "return_expr",
           "named": true
         },
         {
@@ -4177,6 +4785,18 @@
           "named": true
         },
         {
+          "type": "block_expr",
+          "named": true
+        },
+        {
+          "type": "break_expr",
+          "named": true
+        },
+        {
+          "type": "continue_expr",
+          "named": true
+        },
+        {
           "type": "field_expr",
           "named": true
         },
@@ -4185,11 +4805,27 @@
           "named": true
         },
         {
+          "type": "if_expr",
+          "named": true
+        },
+        {
           "type": "index_expr",
           "named": true
         },
         {
           "type": "inv_op",
+          "named": true
+        },
+        {
+          "type": "let",
+          "named": true
+        },
+        {
+          "type": "line_comment",
+          "named": true
+        },
+        {
+          "type": "loop_expr",
           "named": true
         },
         {
@@ -4206,6 +4842,10 @@
         },
         {
           "type": "range_op",
+          "named": true
+        },
+        {
+          "type": "return_expr",
           "named": true
         },
         {
@@ -4388,6 +5028,18 @@
           "named": true
         },
         {
+          "type": "block_expr",
+          "named": true
+        },
+        {
+          "type": "break_expr",
+          "named": true
+        },
+        {
+          "type": "continue_expr",
+          "named": true
+        },
+        {
           "type": "field_expr",
           "named": true
         },
@@ -4396,11 +5048,27 @@
           "named": true
         },
         {
+          "type": "if_expr",
+          "named": true
+        },
+        {
           "type": "index_expr",
           "named": true
         },
         {
           "type": "inv_op",
+          "named": true
+        },
+        {
+          "type": "let",
+          "named": true
+        },
+        {
+          "type": "line_comment",
+          "named": true
+        },
+        {
+          "type": "loop_expr",
           "named": true
         },
         {
@@ -4417,6 +5085,10 @@
         },
         {
           "type": "range_op",
+          "named": true
+        },
+        {
+          "type": "return_expr",
           "named": true
         },
         {
@@ -4599,6 +5271,18 @@
           "named": true
         },
         {
+          "type": "block_expr",
+          "named": true
+        },
+        {
+          "type": "break_expr",
+          "named": true
+        },
+        {
+          "type": "continue_expr",
+          "named": true
+        },
+        {
           "type": "field_expr",
           "named": true
         },
@@ -4607,11 +5291,27 @@
           "named": true
         },
         {
+          "type": "if_expr",
+          "named": true
+        },
+        {
           "type": "index_expr",
           "named": true
         },
         {
           "type": "inv_op",
+          "named": true
+        },
+        {
+          "type": "let",
+          "named": true
+        },
+        {
+          "type": "line_comment",
+          "named": true
+        },
+        {
+          "type": "loop_expr",
           "named": true
         },
         {
@@ -4628,6 +5328,10 @@
         },
         {
           "type": "range_op",
+          "named": true
+        },
+        {
+          "type": "return_expr",
           "named": true
         },
         {
@@ -4810,6 +5514,18 @@
           "named": true
         },
         {
+          "type": "block_expr",
+          "named": true
+        },
+        {
+          "type": "break_expr",
+          "named": true
+        },
+        {
+          "type": "continue_expr",
+          "named": true
+        },
+        {
           "type": "field_expr",
           "named": true
         },
@@ -4818,11 +5534,27 @@
           "named": true
         },
         {
+          "type": "if_expr",
+          "named": true
+        },
+        {
           "type": "index_expr",
           "named": true
         },
         {
           "type": "inv_op",
+          "named": true
+        },
+        {
+          "type": "let",
+          "named": true
+        },
+        {
+          "type": "line_comment",
+          "named": true
+        },
+        {
+          "type": "loop_expr",
           "named": true
         },
         {
@@ -4839,6 +5571,10 @@
         },
         {
           "type": "range_op",
+          "named": true
+        },
+        {
+          "type": "return_expr",
           "named": true
         },
         {
@@ -5021,6 +5757,18 @@
           "named": true
         },
         {
+          "type": "block_expr",
+          "named": true
+        },
+        {
+          "type": "break_expr",
+          "named": true
+        },
+        {
+          "type": "continue_expr",
+          "named": true
+        },
+        {
           "type": "field_expr",
           "named": true
         },
@@ -5029,11 +5777,27 @@
           "named": true
         },
         {
+          "type": "if_expr",
+          "named": true
+        },
+        {
           "type": "index_expr",
           "named": true
         },
         {
           "type": "inv_op",
+          "named": true
+        },
+        {
+          "type": "let",
+          "named": true
+        },
+        {
+          "type": "line_comment",
+          "named": true
+        },
+        {
+          "type": "loop_expr",
           "named": true
         },
         {
@@ -5050,6 +5814,10 @@
         },
         {
           "type": "range_op",
+          "named": true
+        },
+        {
+          "type": "return_expr",
           "named": true
         },
         {
@@ -5232,6 +6000,18 @@
           "named": true
         },
         {
+          "type": "block_expr",
+          "named": true
+        },
+        {
+          "type": "break_expr",
+          "named": true
+        },
+        {
+          "type": "continue_expr",
+          "named": true
+        },
+        {
           "type": "field_expr",
           "named": true
         },
@@ -5240,11 +6020,27 @@
           "named": true
         },
         {
+          "type": "if_expr",
+          "named": true
+        },
+        {
           "type": "index_expr",
           "named": true
         },
         {
           "type": "inv_op",
+          "named": true
+        },
+        {
+          "type": "let",
+          "named": true
+        },
+        {
+          "type": "line_comment",
+          "named": true
+        },
+        {
+          "type": "loop_expr",
           "named": true
         },
         {
@@ -5261,6 +6057,10 @@
         },
         {
           "type": "range_op",
+          "named": true
+        },
+        {
+          "type": "return_expr",
           "named": true
         },
         {
@@ -5443,6 +6243,18 @@
           "named": true
         },
         {
+          "type": "block_expr",
+          "named": true
+        },
+        {
+          "type": "break_expr",
+          "named": true
+        },
+        {
+          "type": "continue_expr",
+          "named": true
+        },
+        {
           "type": "field_expr",
           "named": true
         },
@@ -5451,11 +6263,27 @@
           "named": true
         },
         {
+          "type": "if_expr",
+          "named": true
+        },
+        {
           "type": "index_expr",
           "named": true
         },
         {
           "type": "inv_op",
+          "named": true
+        },
+        {
+          "type": "let",
+          "named": true
+        },
+        {
+          "type": "line_comment",
+          "named": true
+        },
+        {
+          "type": "loop_expr",
           "named": true
         },
         {
@@ -5472,6 +6300,10 @@
         },
         {
           "type": "range_op",
+          "named": true
+        },
+        {
+          "type": "return_expr",
           "named": true
         },
         {
@@ -5654,6 +6486,18 @@
           "named": true
         },
         {
+          "type": "block_expr",
+          "named": true
+        },
+        {
+          "type": "break_expr",
+          "named": true
+        },
+        {
+          "type": "continue_expr",
+          "named": true
+        },
+        {
           "type": "field_expr",
           "named": true
         },
@@ -5662,11 +6506,27 @@
           "named": true
         },
         {
+          "type": "if_expr",
+          "named": true
+        },
+        {
           "type": "index_expr",
           "named": true
         },
         {
           "type": "inv_op",
+          "named": true
+        },
+        {
+          "type": "let",
+          "named": true
+        },
+        {
+          "type": "line_comment",
+          "named": true
+        },
+        {
+          "type": "loop_expr",
           "named": true
         },
         {
@@ -5683,6 +6543,10 @@
         },
         {
           "type": "range_op",
+          "named": true
+        },
+        {
+          "type": "return_expr",
           "named": true
         },
         {
@@ -5865,6 +6729,18 @@
           "named": true
         },
         {
+          "type": "block_expr",
+          "named": true
+        },
+        {
+          "type": "break_expr",
+          "named": true
+        },
+        {
+          "type": "continue_expr",
+          "named": true
+        },
+        {
           "type": "field_expr",
           "named": true
         },
@@ -5873,11 +6749,27 @@
           "named": true
         },
         {
+          "type": "if_expr",
+          "named": true
+        },
+        {
           "type": "index_expr",
           "named": true
         },
         {
           "type": "inv_op",
+          "named": true
+        },
+        {
+          "type": "let",
+          "named": true
+        },
+        {
+          "type": "line_comment",
+          "named": true
+        },
+        {
+          "type": "loop_expr",
           "named": true
         },
         {
@@ -5894,6 +6786,10 @@
         },
         {
           "type": "range_op",
+          "named": true
+        },
+        {
+          "type": "return_expr",
           "named": true
         },
         {
@@ -6076,6 +6972,18 @@
           "named": true
         },
         {
+          "type": "block_expr",
+          "named": true
+        },
+        {
+          "type": "break_expr",
+          "named": true
+        },
+        {
+          "type": "continue_expr",
+          "named": true
+        },
+        {
           "type": "field_expr",
           "named": true
         },
@@ -6084,11 +6992,27 @@
           "named": true
         },
         {
+          "type": "if_expr",
+          "named": true
+        },
+        {
           "type": "index_expr",
           "named": true
         },
         {
           "type": "inv_op",
+          "named": true
+        },
+        {
+          "type": "let",
+          "named": true
+        },
+        {
+          "type": "line_comment",
+          "named": true
+        },
+        {
+          "type": "loop_expr",
           "named": true
         },
         {
@@ -6105,6 +7029,10 @@
         },
         {
           "type": "range_op",
+          "named": true
+        },
+        {
+          "type": "return_expr",
           "named": true
         },
         {
@@ -6287,6 +7215,18 @@
           "named": true
         },
         {
+          "type": "block_expr",
+          "named": true
+        },
+        {
+          "type": "break_expr",
+          "named": true
+        },
+        {
+          "type": "continue_expr",
+          "named": true
+        },
+        {
           "type": "field_expr",
           "named": true
         },
@@ -6295,11 +7235,27 @@
           "named": true
         },
         {
+          "type": "if_expr",
+          "named": true
+        },
+        {
           "type": "index_expr",
           "named": true
         },
         {
           "type": "inv_op",
+          "named": true
+        },
+        {
+          "type": "let",
+          "named": true
+        },
+        {
+          "type": "line_comment",
+          "named": true
+        },
+        {
+          "type": "loop_expr",
           "named": true
         },
         {
@@ -6316,6 +7272,10 @@
         },
         {
           "type": "range_op",
+          "named": true
+        },
+        {
+          "type": "return_expr",
           "named": true
         },
         {
@@ -6498,6 +7458,18 @@
           "named": true
         },
         {
+          "type": "block_expr",
+          "named": true
+        },
+        {
+          "type": "break_expr",
+          "named": true
+        },
+        {
+          "type": "continue_expr",
+          "named": true
+        },
+        {
           "type": "field_expr",
           "named": true
         },
@@ -6506,11 +7478,27 @@
           "named": true
         },
         {
+          "type": "if_expr",
+          "named": true
+        },
+        {
           "type": "index_expr",
           "named": true
         },
         {
           "type": "inv_op",
+          "named": true
+        },
+        {
+          "type": "let",
+          "named": true
+        },
+        {
+          "type": "line_comment",
+          "named": true
+        },
+        {
+          "type": "loop_expr",
           "named": true
         },
         {
@@ -6527,6 +7515,10 @@
         },
         {
           "type": "range_op",
+          "named": true
+        },
+        {
+          "type": "return_expr",
           "named": true
         },
         {
@@ -6709,6 +7701,18 @@
           "named": true
         },
         {
+          "type": "block_expr",
+          "named": true
+        },
+        {
+          "type": "break_expr",
+          "named": true
+        },
+        {
+          "type": "continue_expr",
+          "named": true
+        },
+        {
           "type": "field_expr",
           "named": true
         },
@@ -6717,11 +7721,27 @@
           "named": true
         },
         {
+          "type": "if_expr",
+          "named": true
+        },
+        {
           "type": "index_expr",
           "named": true
         },
         {
           "type": "inv_op",
+          "named": true
+        },
+        {
+          "type": "let",
+          "named": true
+        },
+        {
+          "type": "line_comment",
+          "named": true
+        },
+        {
+          "type": "loop_expr",
           "named": true
         },
         {
@@ -6738,6 +7758,10 @@
         },
         {
           "type": "range_op",
+          "named": true
+        },
+        {
+          "type": "return_expr",
           "named": true
         },
         {
@@ -6920,6 +7944,18 @@
           "named": true
         },
         {
+          "type": "block_expr",
+          "named": true
+        },
+        {
+          "type": "break_expr",
+          "named": true
+        },
+        {
+          "type": "continue_expr",
+          "named": true
+        },
+        {
           "type": "field_expr",
           "named": true
         },
@@ -6928,11 +7964,27 @@
           "named": true
         },
         {
+          "type": "if_expr",
+          "named": true
+        },
+        {
           "type": "index_expr",
           "named": true
         },
         {
           "type": "inv_op",
+          "named": true
+        },
+        {
+          "type": "let",
+          "named": true
+        },
+        {
+          "type": "line_comment",
+          "named": true
+        },
+        {
+          "type": "loop_expr",
           "named": true
         },
         {
@@ -6949,6 +8001,10 @@
         },
         {
           "type": "range_op",
+          "named": true
+        },
+        {
+          "type": "return_expr",
           "named": true
         },
         {
@@ -7131,6 +8187,18 @@
           "named": true
         },
         {
+          "type": "block_expr",
+          "named": true
+        },
+        {
+          "type": "break_expr",
+          "named": true
+        },
+        {
+          "type": "continue_expr",
+          "named": true
+        },
+        {
           "type": "field_expr",
           "named": true
         },
@@ -7139,11 +8207,27 @@
           "named": true
         },
         {
+          "type": "if_expr",
+          "named": true
+        },
+        {
           "type": "index_expr",
           "named": true
         },
         {
           "type": "inv_op",
+          "named": true
+        },
+        {
+          "type": "let",
+          "named": true
+        },
+        {
+          "type": "line_comment",
+          "named": true
+        },
+        {
+          "type": "loop_expr",
           "named": true
         },
         {
@@ -7160,6 +8244,10 @@
         },
         {
           "type": "range_op",
+          "named": true
+        },
+        {
+          "type": "return_expr",
           "named": true
         },
         {
@@ -7342,6 +8430,18 @@
           "named": true
         },
         {
+          "type": "block_expr",
+          "named": true
+        },
+        {
+          "type": "break_expr",
+          "named": true
+        },
+        {
+          "type": "continue_expr",
+          "named": true
+        },
+        {
           "type": "field_expr",
           "named": true
         },
@@ -7350,11 +8450,27 @@
           "named": true
         },
         {
+          "type": "if_expr",
+          "named": true
+        },
+        {
           "type": "index_expr",
           "named": true
         },
         {
           "type": "inv_op",
+          "named": true
+        },
+        {
+          "type": "let",
+          "named": true
+        },
+        {
+          "type": "line_comment",
+          "named": true
+        },
+        {
+          "type": "loop_expr",
           "named": true
         },
         {
@@ -7371,6 +8487,10 @@
         },
         {
           "type": "range_op",
+          "named": true
+        },
+        {
+          "type": "return_expr",
           "named": true
         },
         {
@@ -7553,6 +8673,18 @@
           "named": true
         },
         {
+          "type": "block_expr",
+          "named": true
+        },
+        {
+          "type": "break_expr",
+          "named": true
+        },
+        {
+          "type": "continue_expr",
+          "named": true
+        },
+        {
           "type": "field_expr",
           "named": true
         },
@@ -7561,11 +8693,27 @@
           "named": true
         },
         {
+          "type": "if_expr",
+          "named": true
+        },
+        {
           "type": "index_expr",
           "named": true
         },
         {
           "type": "inv_op",
+          "named": true
+        },
+        {
+          "type": "let",
+          "named": true
+        },
+        {
+          "type": "line_comment",
+          "named": true
+        },
+        {
+          "type": "loop_expr",
           "named": true
         },
         {
@@ -7582,6 +8730,10 @@
         },
         {
           "type": "range_op",
+          "named": true
+        },
+        {
+          "type": "return_expr",
           "named": true
         },
         {
@@ -7764,6 +8916,18 @@
           "named": true
         },
         {
+          "type": "block_expr",
+          "named": true
+        },
+        {
+          "type": "break_expr",
+          "named": true
+        },
+        {
+          "type": "continue_expr",
+          "named": true
+        },
+        {
           "type": "field_expr",
           "named": true
         },
@@ -7772,11 +8936,27 @@
           "named": true
         },
         {
+          "type": "if_expr",
+          "named": true
+        },
+        {
           "type": "index_expr",
           "named": true
         },
         {
           "type": "inv_op",
+          "named": true
+        },
+        {
+          "type": "let",
+          "named": true
+        },
+        {
+          "type": "line_comment",
+          "named": true
+        },
+        {
+          "type": "loop_expr",
           "named": true
         },
         {
@@ -7793,6 +8973,10 @@
         },
         {
           "type": "range_op",
+          "named": true
+        },
+        {
+          "type": "return_expr",
           "named": true
         },
         {
@@ -7975,6 +9159,18 @@
           "named": true
         },
         {
+          "type": "block_expr",
+          "named": true
+        },
+        {
+          "type": "break_expr",
+          "named": true
+        },
+        {
+          "type": "continue_expr",
+          "named": true
+        },
+        {
           "type": "field_expr",
           "named": true
         },
@@ -7983,11 +9179,27 @@
           "named": true
         },
         {
+          "type": "if_expr",
+          "named": true
+        },
+        {
           "type": "index_expr",
           "named": true
         },
         {
           "type": "inv_op",
+          "named": true
+        },
+        {
+          "type": "let",
+          "named": true
+        },
+        {
+          "type": "line_comment",
+          "named": true
+        },
+        {
+          "type": "loop_expr",
           "named": true
         },
         {
@@ -8004,6 +9216,10 @@
         },
         {
           "type": "range_op",
+          "named": true
+        },
+        {
+          "type": "return_expr",
           "named": true
         },
         {
@@ -8186,6 +9402,18 @@
           "named": true
         },
         {
+          "type": "block_expr",
+          "named": true
+        },
+        {
+          "type": "break_expr",
+          "named": true
+        },
+        {
+          "type": "continue_expr",
+          "named": true
+        },
+        {
           "type": "field_expr",
           "named": true
         },
@@ -8194,11 +9422,27 @@
           "named": true
         },
         {
+          "type": "if_expr",
+          "named": true
+        },
+        {
           "type": "index_expr",
           "named": true
         },
         {
           "type": "inv_op",
+          "named": true
+        },
+        {
+          "type": "let",
+          "named": true
+        },
+        {
+          "type": "line_comment",
+          "named": true
+        },
+        {
+          "type": "loop_expr",
           "named": true
         },
         {
@@ -8215,6 +9459,10 @@
         },
         {
           "type": "range_op",
+          "named": true
+        },
+        {
+          "type": "return_expr",
           "named": true
         },
         {
@@ -8397,6 +9645,18 @@
           "named": true
         },
         {
+          "type": "block_expr",
+          "named": true
+        },
+        {
+          "type": "break_expr",
+          "named": true
+        },
+        {
+          "type": "continue_expr",
+          "named": true
+        },
+        {
           "type": "field_expr",
           "named": true
         },
@@ -8405,11 +9665,27 @@
           "named": true
         },
         {
+          "type": "if_expr",
+          "named": true
+        },
+        {
           "type": "index_expr",
           "named": true
         },
         {
           "type": "inv_op",
+          "named": true
+        },
+        {
+          "type": "let",
+          "named": true
+        },
+        {
+          "type": "line_comment",
+          "named": true
+        },
+        {
+          "type": "loop_expr",
           "named": true
         },
         {
@@ -8426,6 +9702,496 @@
         },
         {
           "type": "range_op",
+          "named": true
+        },
+        {
+          "type": "return_expr",
+          "named": true
+        },
+        {
+          "type": "unary_op",
+          "named": true
+        },
+        {
+          "type": "var_expr",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "block_expr",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "binop_add",
+          "named": true
+        },
+        {
+          "type": "binop_add_assign",
+          "named": true
+        },
+        {
+          "type": "binop_and",
+          "named": true
+        },
+        {
+          "type": "binop_and_assign",
+          "named": true
+        },
+        {
+          "type": "binop_assign",
+          "named": true
+        },
+        {
+          "type": "binop_div",
+          "named": true
+        },
+        {
+          "type": "binop_div_assign",
+          "named": true
+        },
+        {
+          "type": "binop_eq",
+          "named": true
+        },
+        {
+          "type": "binop_geq",
+          "named": true
+        },
+        {
+          "type": "binop_gt",
+          "named": true
+        },
+        {
+          "type": "binop_land",
+          "named": true
+        },
+        {
+          "type": "binop_leq",
+          "named": true
+        },
+        {
+          "type": "binop_lor",
+          "named": true
+        },
+        {
+          "type": "binop_lt",
+          "named": true
+        },
+        {
+          "type": "binop_lxor",
+          "named": true
+        },
+        {
+          "type": "binop_mul",
+          "named": true
+        },
+        {
+          "type": "binop_mul_assign",
+          "named": true
+        },
+        {
+          "type": "binop_or",
+          "named": true
+        },
+        {
+          "type": "binop_or_assign",
+          "named": true
+        },
+        {
+          "type": "binop_rem",
+          "named": true
+        },
+        {
+          "type": "binop_rem_assign",
+          "named": true
+        },
+        {
+          "type": "binop_set",
+          "named": true
+        },
+        {
+          "type": "binop_set_add",
+          "named": true
+        },
+        {
+          "type": "binop_set_and",
+          "named": true
+        },
+        {
+          "type": "binop_set_div",
+          "named": true
+        },
+        {
+          "type": "binop_set_mul",
+          "named": true
+        },
+        {
+          "type": "binop_set_or",
+          "named": true
+        },
+        {
+          "type": "binop_set_rem",
+          "named": true
+        },
+        {
+          "type": "binop_set_shl",
+          "named": true
+        },
+        {
+          "type": "binop_set_shr",
+          "named": true
+        },
+        {
+          "type": "binop_set_sub",
+          "named": true
+        },
+        {
+          "type": "binop_set_xor",
+          "named": true
+        },
+        {
+          "type": "binop_shl",
+          "named": true
+        },
+        {
+          "type": "binop_shl_assign",
+          "named": true
+        },
+        {
+          "type": "binop_shr",
+          "named": true
+        },
+        {
+          "type": "binop_shr_assign",
+          "named": true
+        },
+        {
+          "type": "binop_sub",
+          "named": true
+        },
+        {
+          "type": "binop_sub_assign",
+          "named": true
+        },
+        {
+          "type": "binop_xor",
+          "named": true
+        },
+        {
+          "type": "binop_xor_assign",
+          "named": true
+        },
+        {
+          "type": "block_expr",
+          "named": true
+        },
+        {
+          "type": "break_expr",
+          "named": true
+        },
+        {
+          "type": "continue_expr",
+          "named": true
+        },
+        {
+          "type": "field_expr",
+          "named": true
+        },
+        {
+          "type": "function_call",
+          "named": true
+        },
+        {
+          "type": "if_expr",
+          "named": true
+        },
+        {
+          "type": "index_expr",
+          "named": true
+        },
+        {
+          "type": "inv_op",
+          "named": true
+        },
+        {
+          "type": "let",
+          "named": true
+        },
+        {
+          "type": "line_comment",
+          "named": true
+        },
+        {
+          "type": "loop_expr",
+          "named": true
+        },
+        {
+          "type": "method_expr",
+          "named": true
+        },
+        {
+          "type": "num_literal",
+          "named": true
+        },
+        {
+          "type": "range_incl_op",
+          "named": true
+        },
+        {
+          "type": "range_op",
+          "named": true
+        },
+        {
+          "type": "return_expr",
+          "named": true
+        },
+        {
+          "type": "unary_op",
+          "named": true
+        },
+        {
+          "type": "var_expr",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "break_expr",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "binop_add",
+          "named": true
+        },
+        {
+          "type": "binop_add_assign",
+          "named": true
+        },
+        {
+          "type": "binop_and",
+          "named": true
+        },
+        {
+          "type": "binop_and_assign",
+          "named": true
+        },
+        {
+          "type": "binop_assign",
+          "named": true
+        },
+        {
+          "type": "binop_div",
+          "named": true
+        },
+        {
+          "type": "binop_div_assign",
+          "named": true
+        },
+        {
+          "type": "binop_eq",
+          "named": true
+        },
+        {
+          "type": "binop_geq",
+          "named": true
+        },
+        {
+          "type": "binop_gt",
+          "named": true
+        },
+        {
+          "type": "binop_land",
+          "named": true
+        },
+        {
+          "type": "binop_leq",
+          "named": true
+        },
+        {
+          "type": "binop_lor",
+          "named": true
+        },
+        {
+          "type": "binop_lt",
+          "named": true
+        },
+        {
+          "type": "binop_lxor",
+          "named": true
+        },
+        {
+          "type": "binop_mul",
+          "named": true
+        },
+        {
+          "type": "binop_mul_assign",
+          "named": true
+        },
+        {
+          "type": "binop_or",
+          "named": true
+        },
+        {
+          "type": "binop_or_assign",
+          "named": true
+        },
+        {
+          "type": "binop_rem",
+          "named": true
+        },
+        {
+          "type": "binop_rem_assign",
+          "named": true
+        },
+        {
+          "type": "binop_set",
+          "named": true
+        },
+        {
+          "type": "binop_set_add",
+          "named": true
+        },
+        {
+          "type": "binop_set_and",
+          "named": true
+        },
+        {
+          "type": "binop_set_div",
+          "named": true
+        },
+        {
+          "type": "binop_set_mul",
+          "named": true
+        },
+        {
+          "type": "binop_set_or",
+          "named": true
+        },
+        {
+          "type": "binop_set_rem",
+          "named": true
+        },
+        {
+          "type": "binop_set_shl",
+          "named": true
+        },
+        {
+          "type": "binop_set_shr",
+          "named": true
+        },
+        {
+          "type": "binop_set_sub",
+          "named": true
+        },
+        {
+          "type": "binop_set_xor",
+          "named": true
+        },
+        {
+          "type": "binop_shl",
+          "named": true
+        },
+        {
+          "type": "binop_shl_assign",
+          "named": true
+        },
+        {
+          "type": "binop_shr",
+          "named": true
+        },
+        {
+          "type": "binop_shr_assign",
+          "named": true
+        },
+        {
+          "type": "binop_sub",
+          "named": true
+        },
+        {
+          "type": "binop_sub_assign",
+          "named": true
+        },
+        {
+          "type": "binop_xor",
+          "named": true
+        },
+        {
+          "type": "binop_xor_assign",
+          "named": true
+        },
+        {
+          "type": "block_expr",
+          "named": true
+        },
+        {
+          "type": "break_expr",
+          "named": true
+        },
+        {
+          "type": "continue_expr",
+          "named": true
+        },
+        {
+          "type": "field_expr",
+          "named": true
+        },
+        {
+          "type": "function_call",
+          "named": true
+        },
+        {
+          "type": "if_expr",
+          "named": true
+        },
+        {
+          "type": "index_expr",
+          "named": true
+        },
+        {
+          "type": "inv_op",
+          "named": true
+        },
+        {
+          "type": "let",
+          "named": true
+        },
+        {
+          "type": "line_comment",
+          "named": true
+        },
+        {
+          "type": "loop_expr",
+          "named": true
+        },
+        {
+          "type": "method_expr",
+          "named": true
+        },
+        {
+          "type": "num_literal",
+          "named": true
+        },
+        {
+          "type": "range_incl_op",
+          "named": true
+        },
+        {
+          "type": "range_op",
+          "named": true
+        },
+        {
+          "type": "return_expr",
           "named": true
         },
         {
@@ -8608,6 +10374,18 @@
           "named": true
         },
         {
+          "type": "block_expr",
+          "named": true
+        },
+        {
+          "type": "break_expr",
+          "named": true
+        },
+        {
+          "type": "continue_expr",
+          "named": true
+        },
+        {
           "type": "field_expr",
           "named": true
         },
@@ -8616,11 +10394,27 @@
           "named": true
         },
         {
+          "type": "if_expr",
+          "named": true
+        },
+        {
           "type": "index_expr",
           "named": true
         },
         {
           "type": "inv_op",
+          "named": true
+        },
+        {
+          "type": "let",
+          "named": true
+        },
+        {
+          "type": "line_comment",
+          "named": true
+        },
+        {
+          "type": "loop_expr",
           "named": true
         },
         {
@@ -8640,6 +10434,10 @@
           "named": true
         },
         {
+          "type": "return_expr",
+          "named": true
+        },
+        {
           "type": "unary_op",
           "named": true
         },
@@ -8649,6 +10447,285 @@
         }
       ]
     }
+  },
+  {
+    "type": "comptime_block",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "block_expr",
+          "named": true
+        },
+        {
+          "type": "comptime_block",
+          "named": true
+        },
+        {
+          "type": "line_comment",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "const",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "binop_add",
+          "named": true
+        },
+        {
+          "type": "binop_add_assign",
+          "named": true
+        },
+        {
+          "type": "binop_and",
+          "named": true
+        },
+        {
+          "type": "binop_and_assign",
+          "named": true
+        },
+        {
+          "type": "binop_assign",
+          "named": true
+        },
+        {
+          "type": "binop_div",
+          "named": true
+        },
+        {
+          "type": "binop_div_assign",
+          "named": true
+        },
+        {
+          "type": "binop_eq",
+          "named": true
+        },
+        {
+          "type": "binop_geq",
+          "named": true
+        },
+        {
+          "type": "binop_gt",
+          "named": true
+        },
+        {
+          "type": "binop_land",
+          "named": true
+        },
+        {
+          "type": "binop_leq",
+          "named": true
+        },
+        {
+          "type": "binop_lor",
+          "named": true
+        },
+        {
+          "type": "binop_lt",
+          "named": true
+        },
+        {
+          "type": "binop_lxor",
+          "named": true
+        },
+        {
+          "type": "binop_mul",
+          "named": true
+        },
+        {
+          "type": "binop_mul_assign",
+          "named": true
+        },
+        {
+          "type": "binop_or",
+          "named": true
+        },
+        {
+          "type": "binop_or_assign",
+          "named": true
+        },
+        {
+          "type": "binop_rem",
+          "named": true
+        },
+        {
+          "type": "binop_rem_assign",
+          "named": true
+        },
+        {
+          "type": "binop_set",
+          "named": true
+        },
+        {
+          "type": "binop_set_add",
+          "named": true
+        },
+        {
+          "type": "binop_set_and",
+          "named": true
+        },
+        {
+          "type": "binop_set_div",
+          "named": true
+        },
+        {
+          "type": "binop_set_mul",
+          "named": true
+        },
+        {
+          "type": "binop_set_or",
+          "named": true
+        },
+        {
+          "type": "binop_set_rem",
+          "named": true
+        },
+        {
+          "type": "binop_set_shl",
+          "named": true
+        },
+        {
+          "type": "binop_set_shr",
+          "named": true
+        },
+        {
+          "type": "binop_set_sub",
+          "named": true
+        },
+        {
+          "type": "binop_set_xor",
+          "named": true
+        },
+        {
+          "type": "binop_shl",
+          "named": true
+        },
+        {
+          "type": "binop_shl_assign",
+          "named": true
+        },
+        {
+          "type": "binop_shr",
+          "named": true
+        },
+        {
+          "type": "binop_shr_assign",
+          "named": true
+        },
+        {
+          "type": "binop_sub",
+          "named": true
+        },
+        {
+          "type": "binop_sub_assign",
+          "named": true
+        },
+        {
+          "type": "binop_xor",
+          "named": true
+        },
+        {
+          "type": "binop_xor_assign",
+          "named": true
+        },
+        {
+          "type": "block_expr",
+          "named": true
+        },
+        {
+          "type": "break_expr",
+          "named": true
+        },
+        {
+          "type": "continue_expr",
+          "named": true
+        },
+        {
+          "type": "field_expr",
+          "named": true
+        },
+        {
+          "type": "function_call",
+          "named": true
+        },
+        {
+          "type": "if_expr",
+          "named": true
+        },
+        {
+          "type": "index_expr",
+          "named": true
+        },
+        {
+          "type": "inv_op",
+          "named": true
+        },
+        {
+          "type": "let",
+          "named": true
+        },
+        {
+          "type": "line_comment",
+          "named": true
+        },
+        {
+          "type": "loop_expr",
+          "named": true
+        },
+        {
+          "type": "method_expr",
+          "named": true
+        },
+        {
+          "type": "num_literal",
+          "named": true
+        },
+        {
+          "type": "range_incl_op",
+          "named": true
+        },
+        {
+          "type": "range_op",
+          "named": true
+        },
+        {
+          "type": "return_expr",
+          "named": true
+        },
+        {
+          "type": "type",
+          "named": true
+        },
+        {
+          "type": "unary_op",
+          "named": true
+        },
+        {
+          "type": "var_expr",
+          "named": true
+        },
+        {
+          "type": "var_name",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "doc_comment",
+    "named": true,
+    "fields": {}
   },
   {
     "type": "document",
@@ -8834,6 +10911,18 @@
           "named": true
         },
         {
+          "type": "block_expr",
+          "named": true
+        },
+        {
+          "type": "break_expr",
+          "named": true
+        },
+        {
+          "type": "continue_expr",
+          "named": true
+        },
+        {
           "type": "field_expr",
           "named": true
         },
@@ -8842,11 +10931,27 @@
           "named": true
         },
         {
+          "type": "if_expr",
+          "named": true
+        },
+        {
           "type": "index_expr",
           "named": true
         },
         {
           "type": "inv_op",
+          "named": true
+        },
+        {
+          "type": "let",
+          "named": true
+        },
+        {
+          "type": "line_comment",
+          "named": true
+        },
+        {
+          "type": "loop_expr",
           "named": true
         },
         {
@@ -8866,6 +10971,10 @@
           "named": true
         },
         {
+          "type": "return_expr",
+          "named": true
+        },
+        {
           "type": "unary_op",
           "named": true
         },
@@ -8880,6 +10989,133 @@
     "type": "field_expr",
     "named": true,
     "fields": {}
+  },
+  {
+    "type": "fn_def",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "block_expr",
+          "named": true
+        },
+        {
+          "type": "fn_signature",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "fn_extern",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "fn_signature",
+          "named": true
+        },
+        {
+          "type": "qual_external",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "fn_param",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "line_comment",
+          "named": true
+        },
+        {
+          "type": "qual_comptime",
+          "named": true
+        },
+        {
+          "type": "qual_mut",
+          "named": true
+        },
+        {
+          "type": "type",
+          "named": true
+        },
+        {
+          "type": "var_name",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "fn_params",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "fn_param",
+          "named": true
+        },
+        {
+          "type": "self_param",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "fn_signature",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "env_def",
+          "named": true
+        },
+        {
+          "type": "fn_params",
+          "named": true
+        },
+        {
+          "type": "line_comment",
+          "named": true
+        },
+        {
+          "type": "qual_comptime",
+          "named": true
+        },
+        {
+          "type": "qual_maybe_comptime",
+          "named": true
+        },
+        {
+          "type": "type",
+          "named": true
+        },
+        {
+          "type": "var_func_name",
+          "named": true
+        }
+      ]
+    }
   },
   {
     "type": "function_call",
@@ -8910,6 +11146,249 @@
       "types": [
         {
           "type": "env_def",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "if_expr",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "binop_add",
+          "named": true
+        },
+        {
+          "type": "binop_add_assign",
+          "named": true
+        },
+        {
+          "type": "binop_and",
+          "named": true
+        },
+        {
+          "type": "binop_and_assign",
+          "named": true
+        },
+        {
+          "type": "binop_assign",
+          "named": true
+        },
+        {
+          "type": "binop_div",
+          "named": true
+        },
+        {
+          "type": "binop_div_assign",
+          "named": true
+        },
+        {
+          "type": "binop_eq",
+          "named": true
+        },
+        {
+          "type": "binop_geq",
+          "named": true
+        },
+        {
+          "type": "binop_gt",
+          "named": true
+        },
+        {
+          "type": "binop_land",
+          "named": true
+        },
+        {
+          "type": "binop_leq",
+          "named": true
+        },
+        {
+          "type": "binop_lor",
+          "named": true
+        },
+        {
+          "type": "binop_lt",
+          "named": true
+        },
+        {
+          "type": "binop_lxor",
+          "named": true
+        },
+        {
+          "type": "binop_mul",
+          "named": true
+        },
+        {
+          "type": "binop_mul_assign",
+          "named": true
+        },
+        {
+          "type": "binop_or",
+          "named": true
+        },
+        {
+          "type": "binop_or_assign",
+          "named": true
+        },
+        {
+          "type": "binop_rem",
+          "named": true
+        },
+        {
+          "type": "binop_rem_assign",
+          "named": true
+        },
+        {
+          "type": "binop_set",
+          "named": true
+        },
+        {
+          "type": "binop_set_add",
+          "named": true
+        },
+        {
+          "type": "binop_set_and",
+          "named": true
+        },
+        {
+          "type": "binop_set_div",
+          "named": true
+        },
+        {
+          "type": "binop_set_mul",
+          "named": true
+        },
+        {
+          "type": "binop_set_or",
+          "named": true
+        },
+        {
+          "type": "binop_set_rem",
+          "named": true
+        },
+        {
+          "type": "binop_set_shl",
+          "named": true
+        },
+        {
+          "type": "binop_set_shr",
+          "named": true
+        },
+        {
+          "type": "binop_set_sub",
+          "named": true
+        },
+        {
+          "type": "binop_set_xor",
+          "named": true
+        },
+        {
+          "type": "binop_shl",
+          "named": true
+        },
+        {
+          "type": "binop_shl_assign",
+          "named": true
+        },
+        {
+          "type": "binop_shr",
+          "named": true
+        },
+        {
+          "type": "binop_shr_assign",
+          "named": true
+        },
+        {
+          "type": "binop_sub",
+          "named": true
+        },
+        {
+          "type": "binop_sub_assign",
+          "named": true
+        },
+        {
+          "type": "binop_xor",
+          "named": true
+        },
+        {
+          "type": "binop_xor_assign",
+          "named": true
+        },
+        {
+          "type": "block_expr",
+          "named": true
+        },
+        {
+          "type": "break_expr",
+          "named": true
+        },
+        {
+          "type": "continue_expr",
+          "named": true
+        },
+        {
+          "type": "field_expr",
+          "named": true
+        },
+        {
+          "type": "function_call",
+          "named": true
+        },
+        {
+          "type": "if_expr",
+          "named": true
+        },
+        {
+          "type": "index_expr",
+          "named": true
+        },
+        {
+          "type": "inv_op",
+          "named": true
+        },
+        {
+          "type": "let",
+          "named": true
+        },
+        {
+          "type": "line_comment",
+          "named": true
+        },
+        {
+          "type": "loop_expr",
+          "named": true
+        },
+        {
+          "type": "method_expr",
+          "named": true
+        },
+        {
+          "type": "num_literal",
+          "named": true
+        },
+        {
+          "type": "range_incl_op",
+          "named": true
+        },
+        {
+          "type": "range_op",
+          "named": true
+        },
+        {
+          "type": "return_expr",
+          "named": true
+        },
+        {
+          "type": "unary_op",
+          "named": true
+        },
+        {
+          "type": "var_expr",
           "named": true
         }
       ]
@@ -9084,6 +11563,18 @@
           "named": true
         },
         {
+          "type": "block_expr",
+          "named": true
+        },
+        {
+          "type": "break_expr",
+          "named": true
+        },
+        {
+          "type": "continue_expr",
+          "named": true
+        },
+        {
           "type": "field_expr",
           "named": true
         },
@@ -9092,11 +11583,27 @@
           "named": true
         },
         {
+          "type": "if_expr",
+          "named": true
+        },
+        {
           "type": "index_expr",
           "named": true
         },
         {
           "type": "inv_op",
+          "named": true
+        },
+        {
+          "type": "let",
+          "named": true
+        },
+        {
+          "type": "line_comment",
+          "named": true
+        },
+        {
+          "type": "loop_expr",
           "named": true
         },
         {
@@ -9116,6 +11623,10 @@
           "named": true
         },
         {
+          "type": "return_expr",
+          "named": true
+        },
+        {
           "type": "unary_op",
           "named": true
         },
@@ -9125,6 +11636,11 @@
         }
       ]
     }
+  },
+  {
+    "type": "infix_comment",
+    "named": true,
+    "fields": {}
   },
   {
     "type": "inv_op",
@@ -9295,6 +11811,18 @@
           "named": true
         },
         {
+          "type": "block_expr",
+          "named": true
+        },
+        {
+          "type": "break_expr",
+          "named": true
+        },
+        {
+          "type": "continue_expr",
+          "named": true
+        },
+        {
           "type": "field_expr",
           "named": true
         },
@@ -9303,11 +11831,27 @@
           "named": true
         },
         {
+          "type": "if_expr",
+          "named": true
+        },
+        {
           "type": "index_expr",
           "named": true
         },
         {
           "type": "inv_op",
+          "named": true
+        },
+        {
+          "type": "let",
+          "named": true
+        },
+        {
+          "type": "line_comment",
+          "named": true
+        },
+        {
+          "type": "loop_expr",
           "named": true
         },
         {
@@ -9324,6 +11868,10 @@
         },
         {
           "type": "range_op",
+          "named": true
+        },
+        {
+          "type": "return_expr",
           "named": true
         },
         {
@@ -9346,7 +11894,31 @@
       "required": true,
       "types": [
         {
+          "type": "const",
+          "named": true
+        },
+        {
+          "type": "doc_comment",
+          "named": true
+        },
+        {
+          "type": "fn_def",
+          "named": true
+        },
+        {
+          "type": "fn_extern",
+          "named": true
+        },
+        {
+          "type": "infix_comment",
+          "named": true
+        },
+        {
           "type": "let",
+          "named": true
+        },
+        {
+          "type": "line_comment",
           "named": true
         },
         {
@@ -9529,11 +12101,27 @@
           "named": true
         },
         {
+          "type": "block_expr",
+          "named": true
+        },
+        {
+          "type": "break_expr",
+          "named": true
+        },
+        {
+          "type": "continue_expr",
+          "named": true
+        },
+        {
           "type": "field_expr",
           "named": true
         },
         {
           "type": "function_call",
+          "named": true
+        },
+        {
+          "type": "if_expr",
           "named": true
         },
         {
@@ -9545,6 +12133,18 @@
           "named": true
         },
         {
+          "type": "let",
+          "named": true
+        },
+        {
+          "type": "line_comment",
+          "named": true
+        },
+        {
+          "type": "loop_expr",
+          "named": true
+        },
+        {
           "type": "method_expr",
           "named": true
         },
@@ -9553,11 +12153,19 @@
           "named": true
         },
         {
+          "type": "qual_mut",
+          "named": true
+        },
+        {
           "type": "range_incl_op",
           "named": true
         },
         {
           "type": "range_op",
+          "named": true
+        },
+        {
+          "type": "return_expr",
           "named": true
         },
         {
@@ -9574,6 +12182,30 @@
         },
         {
           "type": "var_name",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "line_comment",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "loop_expr",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "block_expr",
+          "named": true
+        },
+        {
+          "type": "line_comment",
           "named": true
         }
       ]
@@ -9605,6 +12237,11 @@
   },
   {
     "type": "num_literal",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "qual_external",
     "named": true,
     "fields": {}
   },
@@ -9777,6 +12414,18 @@
           "named": true
         },
         {
+          "type": "block_expr",
+          "named": true
+        },
+        {
+          "type": "break_expr",
+          "named": true
+        },
+        {
+          "type": "continue_expr",
+          "named": true
+        },
+        {
           "type": "field_expr",
           "named": true
         },
@@ -9785,11 +12434,27 @@
           "named": true
         },
         {
+          "type": "if_expr",
+          "named": true
+        },
+        {
           "type": "index_expr",
           "named": true
         },
         {
           "type": "inv_op",
+          "named": true
+        },
+        {
+          "type": "let",
+          "named": true
+        },
+        {
+          "type": "line_comment",
+          "named": true
+        },
+        {
+          "type": "loop_expr",
           "named": true
         },
         {
@@ -9806,6 +12471,10 @@
         },
         {
           "type": "range_op",
+          "named": true
+        },
+        {
+          "type": "return_expr",
           "named": true
         },
         {
@@ -9988,6 +12657,18 @@
           "named": true
         },
         {
+          "type": "block_expr",
+          "named": true
+        },
+        {
+          "type": "break_expr",
+          "named": true
+        },
+        {
+          "type": "continue_expr",
+          "named": true
+        },
+        {
           "type": "field_expr",
           "named": true
         },
@@ -9996,11 +12677,27 @@
           "named": true
         },
         {
+          "type": "if_expr",
+          "named": true
+        },
+        {
           "type": "index_expr",
           "named": true
         },
         {
           "type": "inv_op",
+          "named": true
+        },
+        {
+          "type": "let",
+          "named": true
+        },
+        {
+          "type": "line_comment",
+          "named": true
+        },
+        {
+          "type": "loop_expr",
           "named": true
         },
         {
@@ -10020,11 +12717,273 @@
           "named": true
         },
         {
+          "type": "return_expr",
+          "named": true
+        },
+        {
           "type": "unary_op",
           "named": true
         },
         {
           "type": "var_expr",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "return_expr",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "binop_add",
+          "named": true
+        },
+        {
+          "type": "binop_add_assign",
+          "named": true
+        },
+        {
+          "type": "binop_and",
+          "named": true
+        },
+        {
+          "type": "binop_and_assign",
+          "named": true
+        },
+        {
+          "type": "binop_assign",
+          "named": true
+        },
+        {
+          "type": "binop_div",
+          "named": true
+        },
+        {
+          "type": "binop_div_assign",
+          "named": true
+        },
+        {
+          "type": "binop_eq",
+          "named": true
+        },
+        {
+          "type": "binop_geq",
+          "named": true
+        },
+        {
+          "type": "binop_gt",
+          "named": true
+        },
+        {
+          "type": "binop_land",
+          "named": true
+        },
+        {
+          "type": "binop_leq",
+          "named": true
+        },
+        {
+          "type": "binop_lor",
+          "named": true
+        },
+        {
+          "type": "binop_lt",
+          "named": true
+        },
+        {
+          "type": "binop_lxor",
+          "named": true
+        },
+        {
+          "type": "binop_mul",
+          "named": true
+        },
+        {
+          "type": "binop_mul_assign",
+          "named": true
+        },
+        {
+          "type": "binop_or",
+          "named": true
+        },
+        {
+          "type": "binop_or_assign",
+          "named": true
+        },
+        {
+          "type": "binop_rem",
+          "named": true
+        },
+        {
+          "type": "binop_rem_assign",
+          "named": true
+        },
+        {
+          "type": "binop_set",
+          "named": true
+        },
+        {
+          "type": "binop_set_add",
+          "named": true
+        },
+        {
+          "type": "binop_set_and",
+          "named": true
+        },
+        {
+          "type": "binop_set_div",
+          "named": true
+        },
+        {
+          "type": "binop_set_mul",
+          "named": true
+        },
+        {
+          "type": "binop_set_or",
+          "named": true
+        },
+        {
+          "type": "binop_set_rem",
+          "named": true
+        },
+        {
+          "type": "binop_set_shl",
+          "named": true
+        },
+        {
+          "type": "binop_set_shr",
+          "named": true
+        },
+        {
+          "type": "binop_set_sub",
+          "named": true
+        },
+        {
+          "type": "binop_set_xor",
+          "named": true
+        },
+        {
+          "type": "binop_shl",
+          "named": true
+        },
+        {
+          "type": "binop_shl_assign",
+          "named": true
+        },
+        {
+          "type": "binop_shr",
+          "named": true
+        },
+        {
+          "type": "binop_shr_assign",
+          "named": true
+        },
+        {
+          "type": "binop_sub",
+          "named": true
+        },
+        {
+          "type": "binop_sub_assign",
+          "named": true
+        },
+        {
+          "type": "binop_xor",
+          "named": true
+        },
+        {
+          "type": "binop_xor_assign",
+          "named": true
+        },
+        {
+          "type": "block_expr",
+          "named": true
+        },
+        {
+          "type": "break_expr",
+          "named": true
+        },
+        {
+          "type": "continue_expr",
+          "named": true
+        },
+        {
+          "type": "field_expr",
+          "named": true
+        },
+        {
+          "type": "function_call",
+          "named": true
+        },
+        {
+          "type": "if_expr",
+          "named": true
+        },
+        {
+          "type": "index_expr",
+          "named": true
+        },
+        {
+          "type": "inv_op",
+          "named": true
+        },
+        {
+          "type": "let",
+          "named": true
+        },
+        {
+          "type": "line_comment",
+          "named": true
+        },
+        {
+          "type": "loop_expr",
+          "named": true
+        },
+        {
+          "type": "method_expr",
+          "named": true
+        },
+        {
+          "type": "num_literal",
+          "named": true
+        },
+        {
+          "type": "range_incl_op",
+          "named": true
+        },
+        {
+          "type": "range_op",
+          "named": true
+        },
+        {
+          "type": "return_expr",
+          "named": true
+        },
+        {
+          "type": "unary_op",
+          "named": true
+        },
+        {
+          "type": "var_expr",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "self_param",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "qual_mut",
           "named": true
         }
       ]
@@ -10214,6 +13173,18 @@
           "named": true
         },
         {
+          "type": "block_expr",
+          "named": true
+        },
+        {
+          "type": "break_expr",
+          "named": true
+        },
+        {
+          "type": "continue_expr",
+          "named": true
+        },
+        {
           "type": "field_expr",
           "named": true
         },
@@ -10222,11 +13193,27 @@
           "named": true
         },
         {
+          "type": "if_expr",
+          "named": true
+        },
+        {
           "type": "index_expr",
           "named": true
         },
         {
           "type": "inv_op",
+          "named": true
+        },
+        {
+          "type": "let",
+          "named": true
+        },
+        {
+          "type": "line_comment",
+          "named": true
+        },
+        {
+          "type": "loop_expr",
           "named": true
         },
         {
@@ -10243,6 +13230,10 @@
         },
         {
           "type": "range_op",
+          "named": true
+        },
+        {
+          "type": "return_expr",
           "named": true
         },
         {
@@ -10263,6 +13254,11 @@
   },
   {
     "type": "var_expr",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "var_func_name",
     "named": true,
     "fields": {}
   },
@@ -10356,6 +13352,10 @@
     "named": false
   },
   {
+    "type": "->",
+    "named": false
+  },
+  {
     "type": ".",
     "named": false
   },
@@ -10369,6 +13369,18 @@
   },
   {
     "type": "/",
+    "named": false
+  },
+  {
+    "type": "//",
+    "named": false
+  },
+  {
+    "type": "//!",
+    "named": false
+  },
+  {
+    "type": "///",
     "named": false
   },
   {
@@ -10476,11 +13488,27 @@
     "named": false
   },
   {
+    "type": "break",
+    "named": false
+  },
+  {
     "type": "const",
     "named": false
   },
   {
+    "type": "continue_expr",
+    "named": true
+  },
+  {
     "type": "e",
+    "named": false
+  },
+  {
+    "type": "else",
+    "named": false
+  },
+  {
+    "type": "external",
     "named": false
   },
   {
@@ -10489,6 +13517,10 @@
   },
   {
     "type": "f64",
+    "named": false
+  },
+  {
+    "type": "fn",
     "named": false
   },
   {
@@ -10512,6 +13544,10 @@
     "named": false
   },
   {
+    "type": "if",
+    "named": false
+  },
+  {
     "type": "isize",
     "named": false
   },
@@ -10520,11 +13556,31 @@
     "named": false
   },
   {
+    "type": "loop",
+    "named": false
+  },
+  {
     "type": "mod",
     "named": false
   },
   {
-    "type": "mut",
+    "type": "qual_comptime",
+    "named": true
+  },
+  {
+    "type": "qual_maybe_comptime",
+    "named": true
+  },
+  {
+    "type": "qual_mut",
+    "named": true
+  },
+  {
+    "type": "ret",
+    "named": false
+  },
+  {
+    "type": "self",
     "named": false
   },
   {
@@ -10556,6 +13612,14 @@
     "named": false
   },
   {
+    "type": "where",
+    "named": false
+  },
+  {
+    "type": "{",
+    "named": false
+  },
+  {
     "type": "|",
     "named": false
   },
@@ -10569,6 +13633,10 @@
   },
   {
     "type": "||",
+    "named": false
+  },
+  {
+    "type": "}",
     "named": false
   }
 ]

@@ -351,5 +351,17 @@ let _ = a + 2.0 * b;
                     (num_literal)
                     (var_expr))))))
 
+====================
+Test Const Statement
+====================
 
+const DIM: usize = 0;
 
+---
+
+(document
+    (item
+        (const
+            (var_name)
+            (type)
+            (num_literal))))

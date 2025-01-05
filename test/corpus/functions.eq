@@ -69,3 +69,29 @@ fn foo<T>(mut self, mut val: T,) -> T {}
                 (type))
             (block_expr))))
 
+
+============================
+References in parameter list
+============================
+
+extern fn foo(&mut self, other: &Self);
+
+---
+
+(document
+    (item
+        (fn_extern
+            (qual_external)
+            (fn_signature
+                (var_func_name)
+                (fn_params
+                    (self_param
+                        (ref_punct)
+                        (qual_mut))
+                    (fn_param
+                        (var_name)
+                        (type
+                            (reference_type
+                                (ref_punct)
+                                (type
+                                    (self_type))))))))))

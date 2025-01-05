@@ -22,6 +22,23 @@ let _ = std::field::BoundaryField::<f64, 2, DIM>::zeros::<NSIZE>(domain);
                 (call_params
                     (var_expr))))))
 
+====================
+Simple Function Call
+====================
+
+let _ = println(hello);
+
+---
+
+(document
+    (item
+        (let
+            (var_name)
+            (function_call
+                (function_name)
+                (call_params
+                    (var_expr))))))
+
 ================
 Number Literal 1
 ================
@@ -365,3 +382,105 @@ const DIM: usize = 0;
             (var_name)
             (type)
             (num_literal))))
+
+
+======================
+Test Block Expressions
+======================
+
+let some_block = {
+    let a = 0;
+    let b = 1;
+    a + b
+};
+
+---
+
+(document
+    (item
+        (let
+            (var_name)
+            (block_expr
+                (let
+                    (var_name)
+                    (num_literal))
+                (let
+                    (var_name)
+                    (num_literal))
+                (binop_add
+                    (var_expr)
+                    (var_expr))))))
+
+=============================
+Test Self-Closing Expressions
+=============================
+
+let some_block = {
+    if 10 > 9 {
+        std::println(hello);
+    }
+    let a = 0;
+};
+
+---
+
+(document
+    (item
+        (let
+            (var_name)
+            (block_expr
+                (if_statement
+                    (binop_gt
+                        (num_literal)
+                        (num_literal))
+                    (block_expr
+                        (function_call
+                            (function_name)
+                            (call_params
+                                (var_expr)))))
+                (let
+                    (var_name)
+                    (num_literal))))))
+
+
+====================
+Test Array List Init
+====================
+
+let array: [u32; 4] = [1, 2, 3, 4];
+
+---
+
+(document
+    (item
+        (let
+            (var_name)
+            (type
+                (array_type
+                    (type)
+                    (num_literal)))
+            (array_list_init
+                (num_literal)
+                (num_literal)
+                (num_literal)
+                (num_literal)))))
+
+====================
+Test Array Copy Init
+====================
+
+let array: [u32; 4] = [1; 4];
+
+---
+
+(document
+    (item
+        (let
+            (var_name)
+            (type
+                (array_type
+                    (type)
+                    (num_literal)))
+            (array_copy_init
+                (num_literal)
+                (num_literal)))))

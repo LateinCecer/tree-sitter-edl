@@ -12,10 +12,14 @@ let a: Some<A, B, C> = some;
         (let
             (var_name)
             (type
+                (type_name)
                 (env_def
-                    (var_expr)
-                    (var_expr)
-                    (var_expr)))
+                    (type
+                        (type_name))
+                    (type
+                        (type_name))
+                    (type
+                        (type_name))))
             (var_expr))))
 
 ===============
@@ -31,9 +35,10 @@ let a: Some<D, E> = some;
         (let
             (var_name)
             (type
+                (type_name)
                 (env_def
-                    (var_expr)
-                    (var_expr)))
+                    (type (type_name))
+                    (type (type_name))))
             (var_expr))))
 
 ===============
@@ -49,12 +54,13 @@ let a: Some<A, B, C, D, E> = some;
         (let
             (var_name)
             (type
+                (type_name)
                 (env_def
-                    (var_expr)
-                    (var_expr)
-                    (var_expr)
-                    (var_expr)
-                    (var_expr)))
+                    (type (type_name))
+                    (type (type_name))
+                    (type (type_name))
+                    (type (type_name))
+                    (type (type_name))))
             (var_expr))))
 
 ====================
@@ -83,7 +89,7 @@ let a: usize = some;
     (item
         (let
             (var_name)
-            (type)
+            (type (type_name (builtin_type)))
             (var_expr))))
 
 ===============
@@ -99,9 +105,10 @@ let a: Some<D, E,> = some;
         (let
             (var_name)
             (type
+                (type_name)
                 (env_def
-                    (var_expr)
-                    (var_expr)))
+                    (type (type_name))
+                    (type (type_name))))
             (var_expr))))
 
 ===============
@@ -117,8 +124,10 @@ let a: foo::Some<D> = some;
         (let
             (var_name)
             (type
+                (type_name)
+                (type_name)
                 (env_def
-                    (var_expr)))
+                    (type (type_name))))
             (var_expr))))
 
 ===============
@@ -134,6 +143,7 @@ let a: Some<> = some;
         (let
             (var_name)
             (type
+                (type_name)
                 (env_def))
             (var_expr))))
 
@@ -150,9 +160,10 @@ let a: Some::<A, B> = some;
         (let
             (var_name)
             (type
+                (type_name)
                 (env_def
-                    (var_expr)
-                    (var_expr)))
+                    (type (type_name))
+                    (type (type_name))))
             (var_expr))))
 
 ===============
@@ -168,9 +179,12 @@ let a: foo::Some::<A, B>::Output = some;
         (let
             (var_name)
             (type
+                (type_name)
+                (type_name)
                 (env_def
-                    (var_expr)
-                    (var_expr)))
+                    (type (type_name))
+                    (type (type_name)))
+                (type_name))
             (var_expr))))
 
 ===============
@@ -186,11 +200,15 @@ let a: foo::Some::<A, B>::Output::test::<A> = some;
         (let
             (var_name)
             (type
+                (type_name)
+                (type_name)
                 (env_def
-                    (var_expr)
-                    (var_expr))
+                    (type (type_name))
+                    (type (type_name)))
+                (type_name)
+                (type_name)
                 (env_def
-                    (var_expr)))
+                    (type (type_name))))
             (var_expr))))
 
 ===============
@@ -203,3 +221,16 @@ let a: Some::<A, B>::Output<B> = some;
 
 ---
 
+(document
+    (item
+        (let
+            (var_name)
+            (type
+                (type_name)
+                (env_def
+                    (type (type_name))
+                    (type (type_name)))
+                (type_name)
+                (env_def
+                    (type (type_name))))
+            (var_expr))))

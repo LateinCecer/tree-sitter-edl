@@ -13,12 +13,20 @@ let _ = std::field::BoundaryField::<f64, 2, DIM>::zeros::<NSIZE>(domain);
             (var_name)
             (function_call
                 (function_name
+                    (function_name_segment)
+                    (function_name_segment)
+                    (function_name_segment)
                     (env_def
-                        (var_expr)
+                        (type
+                            (type_name
+                                (builtin_type)))
                         (num_literal)
-                        (var_expr))
+                        (type
+                            (type_name)))
+                    (function_name_segment)
                     (env_def
-                        (var_expr)))
+                        (type
+                            (type_name))))
                 (call_params
                     (var_expr))))))
 
@@ -35,7 +43,8 @@ let _ = println(hello);
         (let
             (var_name)
             (function_call
-                (function_name)
+                (function_name
+                    (function_name_segment))
                 (call_params
                     (var_expr))))))
 
@@ -221,7 +230,8 @@ let _ = a.field;
         (let
             (var_name)
             (var_expr)
-            (field_expr))))
+            (field_expr
+                (field_name)))))
 
 ================
 Field on integer
@@ -236,7 +246,8 @@ let _ = (5).field;
         (let
             (var_name)
             (num_literal)
-            (field_expr))))
+            (field_expr
+                (field_name)))))
 
 ==============
 Field on float
@@ -251,7 +262,8 @@ let _ = 5.0.field;
         (let
             (var_name)
             (num_literal)
-            (field_expr))))
+            (field_expr
+                (field_name)))))
 
 =========================
 Field on number with hint
@@ -267,12 +279,14 @@ let _ = 5.2e-3.field;
         (let
             (var_name)
             (num_literal)
-            (field_expr)))
+            (field_expr
+                (field_name))))
     (item
         (let
             (var_name)
             (num_literal)
-            (field_expr))))
+            (field_expr
+                (field_name)))))
 
 ============
 Method calls
@@ -289,6 +303,7 @@ let _ = var.method::<f32, 2>(a, 2.3);
             (var_name)
             (var_expr)
             (method_expr
+                (function_name_segment)
                 (call_params
                     (var_expr)
                     (num_literal)))))
@@ -297,8 +312,11 @@ let _ = var.method::<f32, 2>(a, 2.3);
             (var_name)
             (var_expr)
             (method_expr
+                (function_name_segment)
                 (env_def
-                    (var_expr)
+                    (type
+                        (type_name
+                            (builtin_type)))
                     (num_literal))
                 (call_params
                     (var_expr)
@@ -380,7 +398,9 @@ const DIM: usize = 0;
     (item
         (const
             (var_name)
-            (type)
+            (type
+                (type_name
+                    (builtin_type)))
             (num_literal))))
 
 
@@ -435,7 +455,9 @@ let some_block = {
                         (num_literal))
                     (block_expr
                         (function_call
-                            (function_name)
+                            (function_name
+                                (function_name_segment)
+                                (function_name_segment))
                             (call_params
                                 (var_expr)))))
                 (let
@@ -457,7 +479,9 @@ let array: [u32; 4] = [1, 2, 3, 4];
             (var_name)
             (type
                 (array_type
-                    (type)
+                    (type
+                        (type_name
+                            (builtin_type)))
                     (num_literal)))
             (array_list_init
                 (num_literal)
@@ -479,7 +503,9 @@ let array: [u32; 4] = [1; 4];
             (var_name)
             (type
                 (array_type
-                    (type)
+                    (type
+                        (type_name
+                            (builtin_type)))
                     (num_literal)))
             (array_copy_init
                 (num_literal)

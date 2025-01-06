@@ -1,12 +1,18 @@
-//! [script]
-//! authors = ["Adrian Paskert"]
-//! version = "0.1.0"
-//! acodyn_version = "0.2.4"
-//! license = "MIT"
-//! description = "Converts the default file outputs from the incompressible Stokes solver into the .VTK file format"
+//! About
+//! =====
+//! 
+//! This file is taken from the current version of AcoDyn and its original purpose is
+//! to convert AcoDyn output files to the more commonly used VTK file format.
+//! As its structure is quite ~straight forward~, it is used as a _basis_ for testing the
+//! **syntax highlighting** of EDL.
 //!
-//! [dependencies]
-//! acodyn = { version="0.2.4" }
+//! ```edl
+//! let a: u32 = 0;
+//! ```
+//!
+//! ```rust
+//! struct Test {}
+//! ```
 
 use std::Res;
 use std::ResView;
@@ -39,9 +45,15 @@ let domain: Domain<f64, NFACES, DIM> = Domain::first(cc);
 let pressure: Field<_, 1, 1> = Field::new(domain);
 let velocity: Field<_, DIM, 1> = Field::new(domain);
 
+#[target=gpu]
+impl<T, const N: usize, const M: usize> Field<T, N, M> {
+    fn create<const NSIZE: usize, const DIM: usize>(domain: Domain<T, NSIZE, DIM>) -> Self {
+        Field::new(domain);
+    }
+}
 
 fn main() {
-    // load fields from solver
+    // load fields from solver.
     let loader = FieldLoader::<f64>::new(SAVE_PATH);
     let writer = VtkBuilder::<f64, DIM>::new(CONVERT_PATH)
         .insert_geometry(domain.intern());

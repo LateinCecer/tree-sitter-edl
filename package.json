@@ -29,16 +29,32 @@
   },
   "files": [
     "grammar.js",
+    "tree_sitter.json",
     "binding.gyp",
     "prebuilds/**",
     "bindings/node/*",
     "queries/*",
-    "src/**"
+    "src/**",
+    "*.wasm"
   ],
   "tree-sitter": [
     {
-      "scope": "source.edl",
-      "injection-regex": "^edl$"
-    }
+      "name": "eql",
+      "camelcase": "EquationDefinitionLanguage",
+      "scope": "source.eq",
+      "path": ".",
+      "file-types": [
+          "eq"
+      ],
+      "highlights": [
+          "queries/highlights.scm"
+      ],
+      "locals": [
+          "queries/locals.scm"
+      ],
+      "injections": [
+          "queries/injections.scm"
+      ]
+  }
   ]
 }

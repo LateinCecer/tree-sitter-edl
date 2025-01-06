@@ -5,6 +5,11 @@ module.exports = grammar({
         /[\s\p{Zs}\uFEFF\u2028\u2029\u2060\u200B]/,
     ],
 
+    conflicts: $ => [
+        [$.var_expr, $.type_name],
+        [$.type_name, $.function_name_segment],
+    ],
+
     rules: {
         // TODO: add the actual grammar rules
         // resources: https://tree-sitter.github.io/tree-sitter/creating-parsers
@@ -15,12 +20,16 @@ module.exports = grammar({
             choice(
                 $.doc_comment,
                 $.infix_comment,
+                $.macro,
                 $.mod,
                 $.use,
                 seq($.let, ";"),
                 seq($.const, ";"),
                 $.fn_def,
                 $.fn_extern,
+                $.impl,
+                $.trait,
+                $.type_def,
             ),
             repeat("\n")
         ),
@@ -32,21 +41,21 @@ module.exports = grammar({
             seq(
                 "<",
                 seq(
-                    $._ident,
-                    repeat(seq(",", $._ident))
+                    $.type_name,
+                    repeat(seq(",", $.type_name))
                 ),
                 optional(","), ">"
             ),
             seq(
                 "<",
                 seq(
-                    $._ident,
-                    repeat(seq(",", $._ident))
+                    $.type_name,
+                    repeat(seq(",", $.type_name))
                 ),
                 ",",
                 seq(
-                    $._generic_const_def,
-                    repeat(seq(",", $._generic_const_def))
+                    $.generic_const_def,
+                    repeat(seq(",", $.generic_const_def))
                 ),
                 optional(","),
                 ">"
@@ -54,20 +63,27 @@ module.exports = grammar({
             seq(
                 "<",
                 seq(
-                    $._generic_const_def,
-                    repeat(seq(",", $._generic_const_def))
+                    $.generic_const_def,
+                    repeat(seq(",", $.generic_const_def))
                 ),
                 optional(","),
                 ">"
             ),
         ),
+
         env_def: ($) => seq(
             "<",
             optional(seq(
-                $._primary_expr,
+                choice(
+                    prec.dynamic(2, $.type),
+                    prec.dynamic(1, $._primary_expr),
+                ),
                 repeat(seq(
                     ",",
-                    $._primary_expr
+                    choice(
+                        prec.dynamic(2, $.type),
+                        prec.dynamic(1, $._primary_expr),
+                    ),
                 )),
                 optional(",")
             )),
@@ -77,7 +93,7 @@ module.exports = grammar({
         let: ($) => seq(
             "let",
             optional($.qual_mut),
-            $.var_name,
+            field("name", $.var_name),
             optional(seq(":", $.type)),
             "=",
             $._expr,
@@ -85,7 +101,7 @@ module.exports = grammar({
 
         const: ($) => seq(
             "const",
-            $.var_name,
+            field("name", $.var_name),
             ":",
             $.type,
             "=",
@@ -95,8 +111,72 @@ module.exports = grammar({
         var_name: ($) => $._ident,
         var_expr: ($) => $._ident,
 
-        fn_def: ($) => seq($.fn_signature, $.block_expr),
-        fn_extern: ($) => seq($.qual_external, $.fn_signature, ";"),
+        fn_def: ($) => seq(field("signature", $.fn_signature), $.block_expr),
+        fn_extern: ($) => seq($.qual_external, field("signature", $.fn_signature), ";"),
+
+        impl: ($) => seq(
+            "impl",
+            optional($.env),
+            $.type,
+            optional(seq("for", $.type)),
+            "{",
+            repeat(choice(
+                $.fn_def,
+                seq($.const, ";"),
+                seq($.type_def, ";"),
+                $.macro,
+                $.doc_comment,
+                $.infix_comment,
+            )),
+            "}",
+        ),
+
+        trait: ($) => seq(
+            "trait",
+            field("name", $.trait_name),
+            optional($.env),
+            "{",
+            repeat(choice(
+                seq($.fn_signature, ";"),
+                seq($.trait_type_def, ";"),
+                seq($.trait_const_def, ";"),
+                $.macro,
+                $.doc_comment,
+                $.infix_comment,
+            )),
+            "}",
+        ),
+
+        trait_name: ($) => $._ident,
+
+        trait_const_def: ($) => seq(
+            "const",
+            field("name", $.var_name),
+            ":",
+            $.type,
+            optional(seq(
+                "=",
+                $._expr,
+            )),
+        ),
+
+        trait_type_def: ($) => seq(
+            "type",
+            field("name", $._ident),
+            optional($.env),
+            optional(seq(
+                "=",
+                $.type,
+            )),
+        ),
+
+        type_def: ($) => seq(
+            "type",
+            field("name", $._ident),
+            optional($.env),
+            "=",
+            $.type,
+        ),
 
         /* function signature */
         fn_signature: ($) => seq(
@@ -105,8 +185,8 @@ module.exports = grammar({
                 $.qual_maybe_comptime
             )),
             "fn",
-            $.var_func_name,
-            optional($.env_def),
+            field("name", $.var_func_name),
+            optional($.env),
             $.fn_params,
             optional(seq("->", $.type)),
             optional(seq("where"))
@@ -129,16 +209,24 @@ module.exports = grammar({
         /* function parameter */
         fn_param: ($) => seq(
             repeat(choice(
+                $.doc_comment,
+                $.macro,
+            )),
+            repeat(choice(
                 $.qual_mut,
                 $.qual_comptime
             )),
-            $.var_name,
+            field("name", $.var_name),
             ":",
             $.type,
         ),
 
         /* `self`-parameter (with optional mutability qualifier) */
         self_param: ($) => seq(
+            repeat(choice(
+                $.doc_comment,
+                $.macro,
+            )),
             optional($.ref_punct),
             optional($.qual_mut),
             "self"
@@ -159,6 +247,8 @@ module.exports = grammar({
         ),
 
         _non_closing_expr: ($) => choice(
+            $.as_expr,
+
             $.binop_mul,
             $.binop_div,
             $.binop_rem,
@@ -223,6 +313,8 @@ module.exports = grammar({
             Binary operators with precedence
         ----------------------------------------
         */
+        as_expr: ($) => prec.left(12, seq($._expr, "as", $.type)),
+
         binop_mul: ($) => prec.left(11, seq($._expr, "*", $._expr)),
         binop_div: ($) => prec.left(11, seq($._expr, "/", $._expr)),
         binop_rem: ($) => prec.left(11, seq($._expr, "%", $._expr)),
@@ -276,7 +368,6 @@ module.exports = grammar({
         binop_set_rem: ($) => prec.left(1, seq($._expr, "%<-", $._expr)),
 
 
-
         _primary_expr: ($) => (
             /* leading operators go here */
             choice(
@@ -292,6 +383,10 @@ module.exports = grammar({
                 $.var_expr,
                 $.function_call,
                 $.num_literal,
+                $.string,
+                $.string_block,
+                $.char,
+                $.bool_literal,
                 $._array_init,
                 seq("(", $._expr, ")"),
             )),
@@ -391,13 +486,15 @@ module.exports = grammar({
             "]",
         ),
 
-        field_expr: ($) => seq(".", $._ident),
-        method_expr: ($) => seq(".", $._ident, optional(seq("::", $.env_def)), $.call_params),
+        field_expr: ($) => seq(".", $.field_name),
+        method_expr: ($) => seq(".", $.function_name_segment, optional(seq("::", $.env_def)), $.call_params),
         index_expr: ($) => seq("[", $._expr, "]"),
         unary_op: ($) => seq("-", $._primary_expr),
         inv_op: ($) => seq("!", $._primary_expr),
         range_op: ($) => seq("..", $._primary_expr),
         range_incl_op: ($) => seq("..=", $._primary_expr),
+
+        field_name: ($) => $._ident,
 
         function_call: ($) => seq(
             $.function_name,
@@ -464,30 +561,59 @@ module.exports = grammar({
             "]",
         ),
 
-        _base_type: ($) => seq(
-            $._ident,
-            repeat(seq("::", $._ident)),
-            optional(choice(
-                $.env_def,
-                seq(
-                    "::",
+        _base_type: ($) => prec.left(13,
+            seq(
+                $.type_name,
+                repeat(seq("::", $.type_name)),
+                optional(choice(
                     $.env_def,
-                    repeat(seq("::", choice($._ident, $.env_def)))
-                ),
-            ))
+                    seq(
+                        "::",
+                        $.env_def,
+                        repeat(seq("::", choice($.type_name, $.env_def)))
+                    ),
+                ))
+            )
+        ),
+
+        type_name: ($) => choice(
+            prec.left($.builtin_type),
+            prec.left($._ident),
+        ),
+
+        builtin_type: ($) => choice(
+            "i8",
+            "i16",
+            "i32",
+            "i64",
+            "i128",
+            "isize",
+            "u8",
+            "u16",
+            "u32",
+            "u64",
+            "u128",
+            "usize",
+            "f32",
+            "f64",
+            "str",
+            "bool",
+            "char",
         ),
 
         function_name: ($) => seq(
-            $._ident,
-            repeat(seq("::", $._ident)),
+            $.function_name_segment,
+            repeat(seq("::", $.function_name_segment)),
             optional(
                 seq(
                     "::",
                     $.env_def,
-                    repeat(seq("::", choice($._ident, $.env_def)))
+                    repeat(seq("::", choice($.function_name_segment, $.env_def)))
                 ),
             )
         ),
+
+        function_name_segment: ($) => $._ident,
 
         num_literal: ($) => prec.right(100, seq(
             $._int,
@@ -506,12 +632,16 @@ module.exports = grammar({
 
         string: ($) => /"(\\"|[^"\n])*"/,
         string_block: ($) => /r#"[^("#)\n]*"#/,
+        char: ($) => /'(\\'|[^'\n])'/,
 
         line_comment: ($) => seq("//", $._till_line_end),
-        doc_comment: ($) => seq("///", $._till_line_end),
-        infix_comment: ($) => seq("//!", $._till_line_end),
+        doc_comment: ($) => seq("///", field("content", $.md_content)),
+        infix_comment: ($) => seq("//!", field("content", $.md_content)),
 
+        md_content: ($) => /([^\n])*/,
         _till_line_end: ($) => /([^\n])*/,
+
+        bool_literal: ($) => choice("true", "false"),
 
         _number_type_hint: ($) => choice(
             "i8",
@@ -536,7 +666,7 @@ module.exports = grammar({
             $._int,
         ),
 
-        _generic_const_def: ($) => seq("const", $._ident, ":", $.type),
+        generic_const_def: ($) => seq("const", $.var_name, ":", $.type),
 
         _qual: ($) => seq($._ident, repeat(seq("::", $._ident))),
 
@@ -544,6 +674,8 @@ module.exports = grammar({
 
         _int: ($) => /[0-9][0-9_]*/,
 
-        _close: ($) => seq(";", repeat(";"))
+        _close: ($) => seq(";", repeat(";")),
+
+        macro: ($) => /#\[(\\\[|[^\]\n])*\]/,
     }
 })

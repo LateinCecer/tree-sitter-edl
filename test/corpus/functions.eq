@@ -10,7 +10,8 @@ comptime fn main() {}
 
 (document
     (item
-        (doc_comment))
+        (doc_comment
+            (md_content)))
     (item
         (fn_def
             (fn_signature
@@ -24,24 +25,32 @@ Generic Function Signature
 ==========================
 
 //! This is a simple function
-fn foo<T>(val: T) -> T {}
+fn foo<T, const N: usize>(val: T) -> T {}
 
 ---
 
 (document
     (item
-        (infix_comment))
+        (infix_comment
+            (md_content)))
     (item
         (fn_def
             (fn_signature
                 (var_func_name)
-                (env_def
-                    (var_expr))
+                (env
+                    (type_name)
+                    (generic_const_def
+                        (var_name)
+                        (type
+                            (type_name
+                                (builtin_type)))))
                 (fn_params
                     (fn_param
                         (var_name)
-                        (type)))
-                (type))
+                        (type
+                            (type_name))))
+                (type
+                    (type_name)))
             (block_expr))))
 
 =======================================
@@ -57,16 +66,18 @@ fn foo<T>(mut self, mut val: T,) -> T {}
         (fn_def
             (fn_signature
                 (var_func_name)
-                (env_def
-                    (var_expr))
+                (env
+                    (type_name))
                 (fn_params
                     (self_param
                         (qual_mut))
                     (fn_param
                         (qual_mut)
                         (var_name)
-                        (type)))
-                (type))
+                        (type
+                            (type_name))))
+                (type
+                    (type_name)))
             (block_expr))))
 
 

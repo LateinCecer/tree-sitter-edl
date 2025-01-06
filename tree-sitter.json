@@ -1,0 +1,44 @@
+{
+    "grammars": [
+        {
+            "name": "eql",
+            "camelcase": "EquationDefinitionLanguage",
+            "scope": "source.eq",
+            "path": ".",
+            "file-types": [
+                "eq"
+            ],
+            "highlights": [
+                "queries/highlights.scm"
+            ],
+            "locals": [
+                "queries/locals.scm"
+            ],
+            "injections": [
+                "queries/injections.scm"
+            ]
+        }
+    ],
+    "metadata": {
+        "version": "0.1.0",
+        "license": "MIT",
+        "description": "EDL grammer for tree-sitter",
+        "authors": [
+            {
+                "name": "Adrian Paskert",
+                "email": "a.paskert@uni-muenster.de"
+            }
+        ],
+        "links": {
+            "repository": "https://github.com/lateincecer/tree-sitter-edl"
+        }
+    },
+    "bindings": {
+        "c": true,
+        "go": true,
+        "node": true,
+        "python": true,
+        "rust": true,
+        "swift": true
+    }
+}

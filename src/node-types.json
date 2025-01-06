@@ -1,12 +1,20 @@
 [
   {
-    "type": "binop_add",
+    "type": "array_copy_init",
     "named": true,
     "fields": {},
     "children": {
       "multiple": true,
       "required": false,
       "types": [
+        {
+          "type": "array_copy_init",
+          "named": true
+        },
+        {
+          "type": "array_list_init",
+          "named": true
+        },
         {
           "type": "binop_add",
           "named": true
@@ -172,7 +180,19 @@
           "named": true
         },
         {
+          "type": "bool_literal",
+          "named": true
+        },
+        {
           "type": "break_expr",
+          "named": true
+        },
+        {
+          "type": "char",
+          "named": true
+        },
+        {
+          "type": "comptime_block",
           "named": true
         },
         {
@@ -204,7 +224,270 @@
           "named": true
         },
         {
-          "type": "line_comment",
+          "type": "loop_expr",
+          "named": true
+        },
+        {
+          "type": "method_expr",
+          "named": true
+        },
+        {
+          "type": "num_literal",
+          "named": true
+        },
+        {
+          "type": "range_incl_op",
+          "named": true
+        },
+        {
+          "type": "range_op",
+          "named": true
+        },
+        {
+          "type": "return_expr",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        },
+        {
+          "type": "string_block",
+          "named": true
+        },
+        {
+          "type": "unary_op",
+          "named": true
+        },
+        {
+          "type": "var_expr",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "array_list_init",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "array_copy_init",
+          "named": true
+        },
+        {
+          "type": "array_list_init",
+          "named": true
+        },
+        {
+          "type": "binop_add",
+          "named": true
+        },
+        {
+          "type": "binop_add_assign",
+          "named": true
+        },
+        {
+          "type": "binop_and",
+          "named": true
+        },
+        {
+          "type": "binop_and_assign",
+          "named": true
+        },
+        {
+          "type": "binop_assign",
+          "named": true
+        },
+        {
+          "type": "binop_div",
+          "named": true
+        },
+        {
+          "type": "binop_div_assign",
+          "named": true
+        },
+        {
+          "type": "binop_eq",
+          "named": true
+        },
+        {
+          "type": "binop_geq",
+          "named": true
+        },
+        {
+          "type": "binop_gt",
+          "named": true
+        },
+        {
+          "type": "binop_land",
+          "named": true
+        },
+        {
+          "type": "binop_leq",
+          "named": true
+        },
+        {
+          "type": "binop_lor",
+          "named": true
+        },
+        {
+          "type": "binop_lt",
+          "named": true
+        },
+        {
+          "type": "binop_lxor",
+          "named": true
+        },
+        {
+          "type": "binop_mul",
+          "named": true
+        },
+        {
+          "type": "binop_mul_assign",
+          "named": true
+        },
+        {
+          "type": "binop_or",
+          "named": true
+        },
+        {
+          "type": "binop_or_assign",
+          "named": true
+        },
+        {
+          "type": "binop_rem",
+          "named": true
+        },
+        {
+          "type": "binop_rem_assign",
+          "named": true
+        },
+        {
+          "type": "binop_set",
+          "named": true
+        },
+        {
+          "type": "binop_set_add",
+          "named": true
+        },
+        {
+          "type": "binop_set_and",
+          "named": true
+        },
+        {
+          "type": "binop_set_div",
+          "named": true
+        },
+        {
+          "type": "binop_set_mul",
+          "named": true
+        },
+        {
+          "type": "binop_set_or",
+          "named": true
+        },
+        {
+          "type": "binop_set_rem",
+          "named": true
+        },
+        {
+          "type": "binop_set_shl",
+          "named": true
+        },
+        {
+          "type": "binop_set_shr",
+          "named": true
+        },
+        {
+          "type": "binop_set_sub",
+          "named": true
+        },
+        {
+          "type": "binop_set_xor",
+          "named": true
+        },
+        {
+          "type": "binop_shl",
+          "named": true
+        },
+        {
+          "type": "binop_shl_assign",
+          "named": true
+        },
+        {
+          "type": "binop_shr",
+          "named": true
+        },
+        {
+          "type": "binop_shr_assign",
+          "named": true
+        },
+        {
+          "type": "binop_sub",
+          "named": true
+        },
+        {
+          "type": "binop_sub_assign",
+          "named": true
+        },
+        {
+          "type": "binop_xor",
+          "named": true
+        },
+        {
+          "type": "binop_xor_assign",
+          "named": true
+        },
+        {
+          "type": "block_expr",
+          "named": true
+        },
+        {
+          "type": "bool_literal",
+          "named": true
+        },
+        {
+          "type": "break_expr",
+          "named": true
+        },
+        {
+          "type": "char",
+          "named": true
+        },
+        {
+          "type": "comptime_block",
+          "named": true
+        },
+        {
+          "type": "continue_expr",
+          "named": true
+        },
+        {
+          "type": "field_expr",
+          "named": true
+        },
+        {
+          "type": "function_call",
+          "named": true
+        },
+        {
+          "type": "if_expr",
+          "named": true
+        },
+        {
+          "type": "index_expr",
+          "named": true
+        },
+        {
+          "type": "inv_op",
+          "named": true
+        },
+        {
+          "type": "let",
           "named": true
         },
         {
@@ -229,6 +512,552 @@
         },
         {
           "type": "return_expr",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        },
+        {
+          "type": "string_block",
+          "named": true
+        },
+        {
+          "type": "unary_op",
+          "named": true
+        },
+        {
+          "type": "var_expr",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "array_type",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "array_copy_init",
+          "named": true
+        },
+        {
+          "type": "array_list_init",
+          "named": true
+        },
+        {
+          "type": "binop_add",
+          "named": true
+        },
+        {
+          "type": "binop_add_assign",
+          "named": true
+        },
+        {
+          "type": "binop_and",
+          "named": true
+        },
+        {
+          "type": "binop_and_assign",
+          "named": true
+        },
+        {
+          "type": "binop_assign",
+          "named": true
+        },
+        {
+          "type": "binop_div",
+          "named": true
+        },
+        {
+          "type": "binop_div_assign",
+          "named": true
+        },
+        {
+          "type": "binop_eq",
+          "named": true
+        },
+        {
+          "type": "binop_geq",
+          "named": true
+        },
+        {
+          "type": "binop_gt",
+          "named": true
+        },
+        {
+          "type": "binop_land",
+          "named": true
+        },
+        {
+          "type": "binop_leq",
+          "named": true
+        },
+        {
+          "type": "binop_lor",
+          "named": true
+        },
+        {
+          "type": "binop_lt",
+          "named": true
+        },
+        {
+          "type": "binop_lxor",
+          "named": true
+        },
+        {
+          "type": "binop_mul",
+          "named": true
+        },
+        {
+          "type": "binop_mul_assign",
+          "named": true
+        },
+        {
+          "type": "binop_or",
+          "named": true
+        },
+        {
+          "type": "binop_or_assign",
+          "named": true
+        },
+        {
+          "type": "binop_rem",
+          "named": true
+        },
+        {
+          "type": "binop_rem_assign",
+          "named": true
+        },
+        {
+          "type": "binop_set",
+          "named": true
+        },
+        {
+          "type": "binop_set_add",
+          "named": true
+        },
+        {
+          "type": "binop_set_and",
+          "named": true
+        },
+        {
+          "type": "binop_set_div",
+          "named": true
+        },
+        {
+          "type": "binop_set_mul",
+          "named": true
+        },
+        {
+          "type": "binop_set_or",
+          "named": true
+        },
+        {
+          "type": "binop_set_rem",
+          "named": true
+        },
+        {
+          "type": "binop_set_shl",
+          "named": true
+        },
+        {
+          "type": "binop_set_shr",
+          "named": true
+        },
+        {
+          "type": "binop_set_sub",
+          "named": true
+        },
+        {
+          "type": "binop_set_xor",
+          "named": true
+        },
+        {
+          "type": "binop_shl",
+          "named": true
+        },
+        {
+          "type": "binop_shl_assign",
+          "named": true
+        },
+        {
+          "type": "binop_shr",
+          "named": true
+        },
+        {
+          "type": "binop_shr_assign",
+          "named": true
+        },
+        {
+          "type": "binop_sub",
+          "named": true
+        },
+        {
+          "type": "binop_sub_assign",
+          "named": true
+        },
+        {
+          "type": "binop_xor",
+          "named": true
+        },
+        {
+          "type": "binop_xor_assign",
+          "named": true
+        },
+        {
+          "type": "block_expr",
+          "named": true
+        },
+        {
+          "type": "bool_literal",
+          "named": true
+        },
+        {
+          "type": "break_expr",
+          "named": true
+        },
+        {
+          "type": "char",
+          "named": true
+        },
+        {
+          "type": "comptime_block",
+          "named": true
+        },
+        {
+          "type": "continue_expr",
+          "named": true
+        },
+        {
+          "type": "field_expr",
+          "named": true
+        },
+        {
+          "type": "function_call",
+          "named": true
+        },
+        {
+          "type": "if_expr",
+          "named": true
+        },
+        {
+          "type": "index_expr",
+          "named": true
+        },
+        {
+          "type": "inv_op",
+          "named": true
+        },
+        {
+          "type": "let",
+          "named": true
+        },
+        {
+          "type": "loop_expr",
+          "named": true
+        },
+        {
+          "type": "method_expr",
+          "named": true
+        },
+        {
+          "type": "num_literal",
+          "named": true
+        },
+        {
+          "type": "range_incl_op",
+          "named": true
+        },
+        {
+          "type": "range_op",
+          "named": true
+        },
+        {
+          "type": "return_expr",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        },
+        {
+          "type": "string_block",
+          "named": true
+        },
+        {
+          "type": "type",
+          "named": true
+        },
+        {
+          "type": "unary_op",
+          "named": true
+        },
+        {
+          "type": "var_expr",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "binop_add",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "array_copy_init",
+          "named": true
+        },
+        {
+          "type": "array_list_init",
+          "named": true
+        },
+        {
+          "type": "binop_add",
+          "named": true
+        },
+        {
+          "type": "binop_add_assign",
+          "named": true
+        },
+        {
+          "type": "binop_and",
+          "named": true
+        },
+        {
+          "type": "binop_and_assign",
+          "named": true
+        },
+        {
+          "type": "binop_assign",
+          "named": true
+        },
+        {
+          "type": "binop_div",
+          "named": true
+        },
+        {
+          "type": "binop_div_assign",
+          "named": true
+        },
+        {
+          "type": "binop_eq",
+          "named": true
+        },
+        {
+          "type": "binop_geq",
+          "named": true
+        },
+        {
+          "type": "binop_gt",
+          "named": true
+        },
+        {
+          "type": "binop_land",
+          "named": true
+        },
+        {
+          "type": "binop_leq",
+          "named": true
+        },
+        {
+          "type": "binop_lor",
+          "named": true
+        },
+        {
+          "type": "binop_lt",
+          "named": true
+        },
+        {
+          "type": "binop_lxor",
+          "named": true
+        },
+        {
+          "type": "binop_mul",
+          "named": true
+        },
+        {
+          "type": "binop_mul_assign",
+          "named": true
+        },
+        {
+          "type": "binop_or",
+          "named": true
+        },
+        {
+          "type": "binop_or_assign",
+          "named": true
+        },
+        {
+          "type": "binop_rem",
+          "named": true
+        },
+        {
+          "type": "binop_rem_assign",
+          "named": true
+        },
+        {
+          "type": "binop_set",
+          "named": true
+        },
+        {
+          "type": "binop_set_add",
+          "named": true
+        },
+        {
+          "type": "binop_set_and",
+          "named": true
+        },
+        {
+          "type": "binop_set_div",
+          "named": true
+        },
+        {
+          "type": "binop_set_mul",
+          "named": true
+        },
+        {
+          "type": "binop_set_or",
+          "named": true
+        },
+        {
+          "type": "binop_set_rem",
+          "named": true
+        },
+        {
+          "type": "binop_set_shl",
+          "named": true
+        },
+        {
+          "type": "binop_set_shr",
+          "named": true
+        },
+        {
+          "type": "binop_set_sub",
+          "named": true
+        },
+        {
+          "type": "binop_set_xor",
+          "named": true
+        },
+        {
+          "type": "binop_shl",
+          "named": true
+        },
+        {
+          "type": "binop_shl_assign",
+          "named": true
+        },
+        {
+          "type": "binop_shr",
+          "named": true
+        },
+        {
+          "type": "binop_shr_assign",
+          "named": true
+        },
+        {
+          "type": "binop_sub",
+          "named": true
+        },
+        {
+          "type": "binop_sub_assign",
+          "named": true
+        },
+        {
+          "type": "binop_xor",
+          "named": true
+        },
+        {
+          "type": "binop_xor_assign",
+          "named": true
+        },
+        {
+          "type": "block_expr",
+          "named": true
+        },
+        {
+          "type": "bool_literal",
+          "named": true
+        },
+        {
+          "type": "break_expr",
+          "named": true
+        },
+        {
+          "type": "char",
+          "named": true
+        },
+        {
+          "type": "comptime_block",
+          "named": true
+        },
+        {
+          "type": "continue_expr",
+          "named": true
+        },
+        {
+          "type": "field_expr",
+          "named": true
+        },
+        {
+          "type": "function_call",
+          "named": true
+        },
+        {
+          "type": "if_expr",
+          "named": true
+        },
+        {
+          "type": "index_expr",
+          "named": true
+        },
+        {
+          "type": "inv_op",
+          "named": true
+        },
+        {
+          "type": "let",
+          "named": true
+        },
+        {
+          "type": "loop_expr",
+          "named": true
+        },
+        {
+          "type": "method_expr",
+          "named": true
+        },
+        {
+          "type": "num_literal",
+          "named": true
+        },
+        {
+          "type": "range_incl_op",
+          "named": true
+        },
+        {
+          "type": "range_op",
+          "named": true
+        },
+        {
+          "type": "return_expr",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        },
+        {
+          "type": "string_block",
           "named": true
         },
         {
@@ -251,6 +1080,14 @@
       "required": false,
       "types": [
         {
+          "type": "array_copy_init",
+          "named": true
+        },
+        {
+          "type": "array_list_init",
+          "named": true
+        },
+        {
           "type": "binop_add",
           "named": true
         },
@@ -415,7 +1252,19 @@
           "named": true
         },
         {
+          "type": "bool_literal",
+          "named": true
+        },
+        {
           "type": "break_expr",
+          "named": true
+        },
+        {
+          "type": "char",
+          "named": true
+        },
+        {
+          "type": "comptime_block",
           "named": true
         },
         {
@@ -447,10 +1296,6 @@
           "named": true
         },
         {
-          "type": "line_comment",
-          "named": true
-        },
-        {
           "type": "loop_expr",
           "named": true
         },
@@ -472,6 +1317,14 @@
         },
         {
           "type": "return_expr",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        },
+        {
+          "type": "string_block",
           "named": true
         },
         {
@@ -494,6 +1347,14 @@
       "required": false,
       "types": [
         {
+          "type": "array_copy_init",
+          "named": true
+        },
+        {
+          "type": "array_list_init",
+          "named": true
+        },
+        {
           "type": "binop_add",
           "named": true
         },
@@ -658,7 +1519,19 @@
           "named": true
         },
         {
+          "type": "bool_literal",
+          "named": true
+        },
+        {
           "type": "break_expr",
+          "named": true
+        },
+        {
+          "type": "char",
+          "named": true
+        },
+        {
+          "type": "comptime_block",
           "named": true
         },
         {
@@ -690,10 +1563,6 @@
           "named": true
         },
         {
-          "type": "line_comment",
-          "named": true
-        },
-        {
           "type": "loop_expr",
           "named": true
         },
@@ -715,6 +1584,14 @@
         },
         {
           "type": "return_expr",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        },
+        {
+          "type": "string_block",
           "named": true
         },
         {
@@ -737,6 +1614,14 @@
       "required": false,
       "types": [
         {
+          "type": "array_copy_init",
+          "named": true
+        },
+        {
+          "type": "array_list_init",
+          "named": true
+        },
+        {
           "type": "binop_add",
           "named": true
         },
@@ -901,7 +1786,19 @@
           "named": true
         },
         {
+          "type": "bool_literal",
+          "named": true
+        },
+        {
           "type": "break_expr",
+          "named": true
+        },
+        {
+          "type": "char",
+          "named": true
+        },
+        {
+          "type": "comptime_block",
           "named": true
         },
         {
@@ -933,10 +1830,6 @@
           "named": true
         },
         {
-          "type": "line_comment",
-          "named": true
-        },
-        {
           "type": "loop_expr",
           "named": true
         },
@@ -958,6 +1851,14 @@
         },
         {
           "type": "return_expr",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        },
+        {
+          "type": "string_block",
           "named": true
         },
         {
@@ -980,6 +1881,14 @@
       "required": false,
       "types": [
         {
+          "type": "array_copy_init",
+          "named": true
+        },
+        {
+          "type": "array_list_init",
+          "named": true
+        },
+        {
           "type": "binop_add",
           "named": true
         },
@@ -1144,7 +2053,19 @@
           "named": true
         },
         {
+          "type": "bool_literal",
+          "named": true
+        },
+        {
           "type": "break_expr",
+          "named": true
+        },
+        {
+          "type": "char",
+          "named": true
+        },
+        {
+          "type": "comptime_block",
           "named": true
         },
         {
@@ -1176,10 +2097,6 @@
           "named": true
         },
         {
-          "type": "line_comment",
-          "named": true
-        },
-        {
           "type": "loop_expr",
           "named": true
         },
@@ -1201,6 +2118,14 @@
         },
         {
           "type": "return_expr",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        },
+        {
+          "type": "string_block",
           "named": true
         },
         {
@@ -1223,6 +2148,14 @@
       "required": false,
       "types": [
         {
+          "type": "array_copy_init",
+          "named": true
+        },
+        {
+          "type": "array_list_init",
+          "named": true
+        },
+        {
           "type": "binop_add",
           "named": true
         },
@@ -1387,7 +2320,19 @@
           "named": true
         },
         {
+          "type": "bool_literal",
+          "named": true
+        },
+        {
           "type": "break_expr",
+          "named": true
+        },
+        {
+          "type": "char",
+          "named": true
+        },
+        {
+          "type": "comptime_block",
           "named": true
         },
         {
@@ -1419,10 +2364,6 @@
           "named": true
         },
         {
-          "type": "line_comment",
-          "named": true
-        },
-        {
           "type": "loop_expr",
           "named": true
         },
@@ -1444,6 +2385,14 @@
         },
         {
           "type": "return_expr",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        },
+        {
+          "type": "string_block",
           "named": true
         },
         {
@@ -1466,6 +2415,14 @@
       "required": false,
       "types": [
         {
+          "type": "array_copy_init",
+          "named": true
+        },
+        {
+          "type": "array_list_init",
+          "named": true
+        },
+        {
           "type": "binop_add",
           "named": true
         },
@@ -1630,7 +2587,19 @@
           "named": true
         },
         {
+          "type": "bool_literal",
+          "named": true
+        },
+        {
           "type": "break_expr",
+          "named": true
+        },
+        {
+          "type": "char",
+          "named": true
+        },
+        {
+          "type": "comptime_block",
           "named": true
         },
         {
@@ -1662,10 +2631,6 @@
           "named": true
         },
         {
-          "type": "line_comment",
-          "named": true
-        },
-        {
           "type": "loop_expr",
           "named": true
         },
@@ -1687,6 +2652,14 @@
         },
         {
           "type": "return_expr",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        },
+        {
+          "type": "string_block",
           "named": true
         },
         {
@@ -1709,6 +2682,14 @@
       "required": false,
       "types": [
         {
+          "type": "array_copy_init",
+          "named": true
+        },
+        {
+          "type": "array_list_init",
+          "named": true
+        },
+        {
           "type": "binop_add",
           "named": true
         },
@@ -1873,7 +2854,19 @@
           "named": true
         },
         {
+          "type": "bool_literal",
+          "named": true
+        },
+        {
           "type": "break_expr",
+          "named": true
+        },
+        {
+          "type": "char",
+          "named": true
+        },
+        {
+          "type": "comptime_block",
           "named": true
         },
         {
@@ -1905,10 +2898,6 @@
           "named": true
         },
         {
-          "type": "line_comment",
-          "named": true
-        },
-        {
           "type": "loop_expr",
           "named": true
         },
@@ -1930,6 +2919,14 @@
         },
         {
           "type": "return_expr",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        },
+        {
+          "type": "string_block",
           "named": true
         },
         {
@@ -1952,6 +2949,14 @@
       "required": false,
       "types": [
         {
+          "type": "array_copy_init",
+          "named": true
+        },
+        {
+          "type": "array_list_init",
+          "named": true
+        },
+        {
           "type": "binop_add",
           "named": true
         },
@@ -2116,7 +3121,19 @@
           "named": true
         },
         {
+          "type": "bool_literal",
+          "named": true
+        },
+        {
           "type": "break_expr",
+          "named": true
+        },
+        {
+          "type": "char",
+          "named": true
+        },
+        {
+          "type": "comptime_block",
           "named": true
         },
         {
@@ -2148,10 +3165,6 @@
           "named": true
         },
         {
-          "type": "line_comment",
-          "named": true
-        },
-        {
           "type": "loop_expr",
           "named": true
         },
@@ -2173,6 +3186,14 @@
         },
         {
           "type": "return_expr",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        },
+        {
+          "type": "string_block",
           "named": true
         },
         {
@@ -2195,6 +3216,14 @@
       "required": false,
       "types": [
         {
+          "type": "array_copy_init",
+          "named": true
+        },
+        {
+          "type": "array_list_init",
+          "named": true
+        },
+        {
           "type": "binop_add",
           "named": true
         },
@@ -2359,7 +3388,19 @@
           "named": true
         },
         {
+          "type": "bool_literal",
+          "named": true
+        },
+        {
           "type": "break_expr",
+          "named": true
+        },
+        {
+          "type": "char",
+          "named": true
+        },
+        {
+          "type": "comptime_block",
           "named": true
         },
         {
@@ -2391,10 +3432,6 @@
           "named": true
         },
         {
-          "type": "line_comment",
-          "named": true
-        },
-        {
           "type": "loop_expr",
           "named": true
         },
@@ -2416,6 +3453,14 @@
         },
         {
           "type": "return_expr",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        },
+        {
+          "type": "string_block",
           "named": true
         },
         {
@@ -2438,6 +3483,14 @@
       "required": false,
       "types": [
         {
+          "type": "array_copy_init",
+          "named": true
+        },
+        {
+          "type": "array_list_init",
+          "named": true
+        },
+        {
           "type": "binop_add",
           "named": true
         },
@@ -2602,7 +3655,19 @@
           "named": true
         },
         {
+          "type": "bool_literal",
+          "named": true
+        },
+        {
           "type": "break_expr",
+          "named": true
+        },
+        {
+          "type": "char",
+          "named": true
+        },
+        {
+          "type": "comptime_block",
           "named": true
         },
         {
@@ -2634,10 +3699,6 @@
           "named": true
         },
         {
-          "type": "line_comment",
-          "named": true
-        },
-        {
           "type": "loop_expr",
           "named": true
         },
@@ -2659,6 +3720,14 @@
         },
         {
           "type": "return_expr",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        },
+        {
+          "type": "string_block",
           "named": true
         },
         {
@@ -2681,6 +3750,14 @@
       "required": false,
       "types": [
         {
+          "type": "array_copy_init",
+          "named": true
+        },
+        {
+          "type": "array_list_init",
+          "named": true
+        },
+        {
           "type": "binop_add",
           "named": true
         },
@@ -2845,7 +3922,19 @@
           "named": true
         },
         {
+          "type": "bool_literal",
+          "named": true
+        },
+        {
           "type": "break_expr",
+          "named": true
+        },
+        {
+          "type": "char",
+          "named": true
+        },
+        {
+          "type": "comptime_block",
           "named": true
         },
         {
@@ -2877,10 +3966,6 @@
           "named": true
         },
         {
-          "type": "line_comment",
-          "named": true
-        },
-        {
           "type": "loop_expr",
           "named": true
         },
@@ -2902,6 +3987,14 @@
         },
         {
           "type": "return_expr",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        },
+        {
+          "type": "string_block",
           "named": true
         },
         {
@@ -2924,6 +4017,14 @@
       "required": false,
       "types": [
         {
+          "type": "array_copy_init",
+          "named": true
+        },
+        {
+          "type": "array_list_init",
+          "named": true
+        },
+        {
           "type": "binop_add",
           "named": true
         },
@@ -3088,7 +4189,19 @@
           "named": true
         },
         {
+          "type": "bool_literal",
+          "named": true
+        },
+        {
           "type": "break_expr",
+          "named": true
+        },
+        {
+          "type": "char",
+          "named": true
+        },
+        {
+          "type": "comptime_block",
           "named": true
         },
         {
@@ -3120,10 +4233,6 @@
           "named": true
         },
         {
-          "type": "line_comment",
-          "named": true
-        },
-        {
           "type": "loop_expr",
           "named": true
         },
@@ -3145,6 +4254,14 @@
         },
         {
           "type": "return_expr",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        },
+        {
+          "type": "string_block",
           "named": true
         },
         {
@@ -3167,6 +4284,14 @@
       "required": false,
       "types": [
         {
+          "type": "array_copy_init",
+          "named": true
+        },
+        {
+          "type": "array_list_init",
+          "named": true
+        },
+        {
           "type": "binop_add",
           "named": true
         },
@@ -3331,7 +4456,19 @@
           "named": true
         },
         {
+          "type": "bool_literal",
+          "named": true
+        },
+        {
           "type": "break_expr",
+          "named": true
+        },
+        {
+          "type": "char",
+          "named": true
+        },
+        {
+          "type": "comptime_block",
           "named": true
         },
         {
@@ -3363,10 +4500,6 @@
           "named": true
         },
         {
-          "type": "line_comment",
-          "named": true
-        },
-        {
           "type": "loop_expr",
           "named": true
         },
@@ -3388,6 +4521,14 @@
         },
         {
           "type": "return_expr",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        },
+        {
+          "type": "string_block",
           "named": true
         },
         {
@@ -3410,6 +4551,14 @@
       "required": false,
       "types": [
         {
+          "type": "array_copy_init",
+          "named": true
+        },
+        {
+          "type": "array_list_init",
+          "named": true
+        },
+        {
           "type": "binop_add",
           "named": true
         },
@@ -3574,7 +4723,19 @@
           "named": true
         },
         {
+          "type": "bool_literal",
+          "named": true
+        },
+        {
           "type": "break_expr",
+          "named": true
+        },
+        {
+          "type": "char",
+          "named": true
+        },
+        {
+          "type": "comptime_block",
           "named": true
         },
         {
@@ -3606,10 +4767,6 @@
           "named": true
         },
         {
-          "type": "line_comment",
-          "named": true
-        },
-        {
           "type": "loop_expr",
           "named": true
         },
@@ -3631,6 +4788,14 @@
         },
         {
           "type": "return_expr",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        },
+        {
+          "type": "string_block",
           "named": true
         },
         {
@@ -3653,6 +4818,14 @@
       "required": false,
       "types": [
         {
+          "type": "array_copy_init",
+          "named": true
+        },
+        {
+          "type": "array_list_init",
+          "named": true
+        },
+        {
           "type": "binop_add",
           "named": true
         },
@@ -3817,7 +4990,19 @@
           "named": true
         },
         {
+          "type": "bool_literal",
+          "named": true
+        },
+        {
           "type": "break_expr",
+          "named": true
+        },
+        {
+          "type": "char",
+          "named": true
+        },
+        {
+          "type": "comptime_block",
           "named": true
         },
         {
@@ -3849,10 +5034,6 @@
           "named": true
         },
         {
-          "type": "line_comment",
-          "named": true
-        },
-        {
           "type": "loop_expr",
           "named": true
         },
@@ -3874,6 +5055,14 @@
         },
         {
           "type": "return_expr",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        },
+        {
+          "type": "string_block",
           "named": true
         },
         {
@@ -3896,6 +5085,14 @@
       "required": false,
       "types": [
         {
+          "type": "array_copy_init",
+          "named": true
+        },
+        {
+          "type": "array_list_init",
+          "named": true
+        },
+        {
           "type": "binop_add",
           "named": true
         },
@@ -4060,7 +5257,19 @@
           "named": true
         },
         {
+          "type": "bool_literal",
+          "named": true
+        },
+        {
           "type": "break_expr",
+          "named": true
+        },
+        {
+          "type": "char",
+          "named": true
+        },
+        {
+          "type": "comptime_block",
           "named": true
         },
         {
@@ -4092,10 +5301,6 @@
           "named": true
         },
         {
-          "type": "line_comment",
-          "named": true
-        },
-        {
           "type": "loop_expr",
           "named": true
         },
@@ -4117,6 +5322,14 @@
         },
         {
           "type": "return_expr",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        },
+        {
+          "type": "string_block",
           "named": true
         },
         {
@@ -4139,6 +5352,14 @@
       "required": false,
       "types": [
         {
+          "type": "array_copy_init",
+          "named": true
+        },
+        {
+          "type": "array_list_init",
+          "named": true
+        },
+        {
           "type": "binop_add",
           "named": true
         },
@@ -4303,7 +5524,19 @@
           "named": true
         },
         {
+          "type": "bool_literal",
+          "named": true
+        },
+        {
           "type": "break_expr",
+          "named": true
+        },
+        {
+          "type": "char",
+          "named": true
+        },
+        {
+          "type": "comptime_block",
           "named": true
         },
         {
@@ -4335,10 +5568,6 @@
           "named": true
         },
         {
-          "type": "line_comment",
-          "named": true
-        },
-        {
           "type": "loop_expr",
           "named": true
         },
@@ -4360,6 +5589,14 @@
         },
         {
           "type": "return_expr",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        },
+        {
+          "type": "string_block",
           "named": true
         },
         {
@@ -4382,6 +5619,14 @@
       "required": false,
       "types": [
         {
+          "type": "array_copy_init",
+          "named": true
+        },
+        {
+          "type": "array_list_init",
+          "named": true
+        },
+        {
           "type": "binop_add",
           "named": true
         },
@@ -4546,7 +5791,19 @@
           "named": true
         },
         {
+          "type": "bool_literal",
+          "named": true
+        },
+        {
           "type": "break_expr",
+          "named": true
+        },
+        {
+          "type": "char",
+          "named": true
+        },
+        {
+          "type": "comptime_block",
           "named": true
         },
         {
@@ -4578,10 +5835,6 @@
           "named": true
         },
         {
-          "type": "line_comment",
-          "named": true
-        },
-        {
           "type": "loop_expr",
           "named": true
         },
@@ -4603,6 +5856,14 @@
         },
         {
           "type": "return_expr",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        },
+        {
+          "type": "string_block",
           "named": true
         },
         {
@@ -4625,6 +5886,14 @@
       "required": false,
       "types": [
         {
+          "type": "array_copy_init",
+          "named": true
+        },
+        {
+          "type": "array_list_init",
+          "named": true
+        },
+        {
           "type": "binop_add",
           "named": true
         },
@@ -4789,7 +6058,19 @@
           "named": true
         },
         {
+          "type": "bool_literal",
+          "named": true
+        },
+        {
           "type": "break_expr",
+          "named": true
+        },
+        {
+          "type": "char",
+          "named": true
+        },
+        {
+          "type": "comptime_block",
           "named": true
         },
         {
@@ -4821,10 +6102,6 @@
           "named": true
         },
         {
-          "type": "line_comment",
-          "named": true
-        },
-        {
           "type": "loop_expr",
           "named": true
         },
@@ -4846,6 +6123,14 @@
         },
         {
           "type": "return_expr",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        },
+        {
+          "type": "string_block",
           "named": true
         },
         {
@@ -4868,6 +6153,14 @@
       "required": false,
       "types": [
         {
+          "type": "array_copy_init",
+          "named": true
+        },
+        {
+          "type": "array_list_init",
+          "named": true
+        },
+        {
           "type": "binop_add",
           "named": true
         },
@@ -5032,7 +6325,19 @@
           "named": true
         },
         {
+          "type": "bool_literal",
+          "named": true
+        },
+        {
           "type": "break_expr",
+          "named": true
+        },
+        {
+          "type": "char",
+          "named": true
+        },
+        {
+          "type": "comptime_block",
           "named": true
         },
         {
@@ -5064,10 +6369,6 @@
           "named": true
         },
         {
-          "type": "line_comment",
-          "named": true
-        },
-        {
           "type": "loop_expr",
           "named": true
         },
@@ -5089,6 +6390,14 @@
         },
         {
           "type": "return_expr",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        },
+        {
+          "type": "string_block",
           "named": true
         },
         {
@@ -5111,6 +6420,14 @@
       "required": false,
       "types": [
         {
+          "type": "array_copy_init",
+          "named": true
+        },
+        {
+          "type": "array_list_init",
+          "named": true
+        },
+        {
           "type": "binop_add",
           "named": true
         },
@@ -5275,7 +6592,19 @@
           "named": true
         },
         {
+          "type": "bool_literal",
+          "named": true
+        },
+        {
           "type": "break_expr",
+          "named": true
+        },
+        {
+          "type": "char",
+          "named": true
+        },
+        {
+          "type": "comptime_block",
           "named": true
         },
         {
@@ -5307,10 +6636,6 @@
           "named": true
         },
         {
-          "type": "line_comment",
-          "named": true
-        },
-        {
           "type": "loop_expr",
           "named": true
         },
@@ -5332,6 +6657,14 @@
         },
         {
           "type": "return_expr",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        },
+        {
+          "type": "string_block",
           "named": true
         },
         {
@@ -5354,6 +6687,14 @@
       "required": false,
       "types": [
         {
+          "type": "array_copy_init",
+          "named": true
+        },
+        {
+          "type": "array_list_init",
+          "named": true
+        },
+        {
           "type": "binop_add",
           "named": true
         },
@@ -5518,7 +6859,19 @@
           "named": true
         },
         {
+          "type": "bool_literal",
+          "named": true
+        },
+        {
           "type": "break_expr",
+          "named": true
+        },
+        {
+          "type": "char",
+          "named": true
+        },
+        {
+          "type": "comptime_block",
           "named": true
         },
         {
@@ -5550,10 +6903,6 @@
           "named": true
         },
         {
-          "type": "line_comment",
-          "named": true
-        },
-        {
           "type": "loop_expr",
           "named": true
         },
@@ -5575,6 +6924,14 @@
         },
         {
           "type": "return_expr",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        },
+        {
+          "type": "string_block",
           "named": true
         },
         {
@@ -5597,6 +6954,14 @@
       "required": false,
       "types": [
         {
+          "type": "array_copy_init",
+          "named": true
+        },
+        {
+          "type": "array_list_init",
+          "named": true
+        },
+        {
           "type": "binop_add",
           "named": true
         },
@@ -5761,7 +7126,19 @@
           "named": true
         },
         {
+          "type": "bool_literal",
+          "named": true
+        },
+        {
           "type": "break_expr",
+          "named": true
+        },
+        {
+          "type": "char",
+          "named": true
+        },
+        {
+          "type": "comptime_block",
           "named": true
         },
         {
@@ -5793,10 +7170,6 @@
           "named": true
         },
         {
-          "type": "line_comment",
-          "named": true
-        },
-        {
           "type": "loop_expr",
           "named": true
         },
@@ -5818,6 +7191,14 @@
         },
         {
           "type": "return_expr",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        },
+        {
+          "type": "string_block",
           "named": true
         },
         {
@@ -5840,6 +7221,14 @@
       "required": false,
       "types": [
         {
+          "type": "array_copy_init",
+          "named": true
+        },
+        {
+          "type": "array_list_init",
+          "named": true
+        },
+        {
           "type": "binop_add",
           "named": true
         },
@@ -6004,7 +7393,19 @@
           "named": true
         },
         {
+          "type": "bool_literal",
+          "named": true
+        },
+        {
           "type": "break_expr",
+          "named": true
+        },
+        {
+          "type": "char",
+          "named": true
+        },
+        {
+          "type": "comptime_block",
           "named": true
         },
         {
@@ -6036,10 +7437,6 @@
           "named": true
         },
         {
-          "type": "line_comment",
-          "named": true
-        },
-        {
           "type": "loop_expr",
           "named": true
         },
@@ -6061,6 +7458,14 @@
         },
         {
           "type": "return_expr",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        },
+        {
+          "type": "string_block",
           "named": true
         },
         {
@@ -6083,6 +7488,14 @@
       "required": false,
       "types": [
         {
+          "type": "array_copy_init",
+          "named": true
+        },
+        {
+          "type": "array_list_init",
+          "named": true
+        },
+        {
           "type": "binop_add",
           "named": true
         },
@@ -6247,7 +7660,19 @@
           "named": true
         },
         {
+          "type": "bool_literal",
+          "named": true
+        },
+        {
           "type": "break_expr",
+          "named": true
+        },
+        {
+          "type": "char",
+          "named": true
+        },
+        {
+          "type": "comptime_block",
           "named": true
         },
         {
@@ -6279,10 +7704,6 @@
           "named": true
         },
         {
-          "type": "line_comment",
-          "named": true
-        },
-        {
           "type": "loop_expr",
           "named": true
         },
@@ -6304,6 +7725,14 @@
         },
         {
           "type": "return_expr",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        },
+        {
+          "type": "string_block",
           "named": true
         },
         {
@@ -6326,6 +7755,14 @@
       "required": false,
       "types": [
         {
+          "type": "array_copy_init",
+          "named": true
+        },
+        {
+          "type": "array_list_init",
+          "named": true
+        },
+        {
           "type": "binop_add",
           "named": true
         },
@@ -6490,7 +7927,19 @@
           "named": true
         },
         {
+          "type": "bool_literal",
+          "named": true
+        },
+        {
           "type": "break_expr",
+          "named": true
+        },
+        {
+          "type": "char",
+          "named": true
+        },
+        {
+          "type": "comptime_block",
           "named": true
         },
         {
@@ -6522,10 +7971,6 @@
           "named": true
         },
         {
-          "type": "line_comment",
-          "named": true
-        },
-        {
           "type": "loop_expr",
           "named": true
         },
@@ -6547,6 +7992,14 @@
         },
         {
           "type": "return_expr",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        },
+        {
+          "type": "string_block",
           "named": true
         },
         {
@@ -6569,6 +8022,14 @@
       "required": false,
       "types": [
         {
+          "type": "array_copy_init",
+          "named": true
+        },
+        {
+          "type": "array_list_init",
+          "named": true
+        },
+        {
           "type": "binop_add",
           "named": true
         },
@@ -6733,7 +8194,19 @@
           "named": true
         },
         {
+          "type": "bool_literal",
+          "named": true
+        },
+        {
           "type": "break_expr",
+          "named": true
+        },
+        {
+          "type": "char",
+          "named": true
+        },
+        {
+          "type": "comptime_block",
           "named": true
         },
         {
@@ -6765,10 +8238,6 @@
           "named": true
         },
         {
-          "type": "line_comment",
-          "named": true
-        },
-        {
           "type": "loop_expr",
           "named": true
         },
@@ -6790,6 +8259,14 @@
         },
         {
           "type": "return_expr",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        },
+        {
+          "type": "string_block",
           "named": true
         },
         {
@@ -6812,6 +8289,14 @@
       "required": false,
       "types": [
         {
+          "type": "array_copy_init",
+          "named": true
+        },
+        {
+          "type": "array_list_init",
+          "named": true
+        },
+        {
           "type": "binop_add",
           "named": true
         },
@@ -6976,7 +8461,19 @@
           "named": true
         },
         {
+          "type": "bool_literal",
+          "named": true
+        },
+        {
           "type": "break_expr",
+          "named": true
+        },
+        {
+          "type": "char",
+          "named": true
+        },
+        {
+          "type": "comptime_block",
           "named": true
         },
         {
@@ -7008,10 +8505,6 @@
           "named": true
         },
         {
-          "type": "line_comment",
-          "named": true
-        },
-        {
           "type": "loop_expr",
           "named": true
         },
@@ -7033,6 +8526,14 @@
         },
         {
           "type": "return_expr",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        },
+        {
+          "type": "string_block",
           "named": true
         },
         {
@@ -7055,6 +8556,14 @@
       "required": false,
       "types": [
         {
+          "type": "array_copy_init",
+          "named": true
+        },
+        {
+          "type": "array_list_init",
+          "named": true
+        },
+        {
           "type": "binop_add",
           "named": true
         },
@@ -7219,7 +8728,19 @@
           "named": true
         },
         {
+          "type": "bool_literal",
+          "named": true
+        },
+        {
           "type": "break_expr",
+          "named": true
+        },
+        {
+          "type": "char",
+          "named": true
+        },
+        {
+          "type": "comptime_block",
           "named": true
         },
         {
@@ -7251,10 +8772,6 @@
           "named": true
         },
         {
-          "type": "line_comment",
-          "named": true
-        },
-        {
           "type": "loop_expr",
           "named": true
         },
@@ -7276,6 +8793,14 @@
         },
         {
           "type": "return_expr",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        },
+        {
+          "type": "string_block",
           "named": true
         },
         {
@@ -7298,6 +8823,14 @@
       "required": false,
       "types": [
         {
+          "type": "array_copy_init",
+          "named": true
+        },
+        {
+          "type": "array_list_init",
+          "named": true
+        },
+        {
           "type": "binop_add",
           "named": true
         },
@@ -7462,7 +8995,19 @@
           "named": true
         },
         {
+          "type": "bool_literal",
+          "named": true
+        },
+        {
           "type": "break_expr",
+          "named": true
+        },
+        {
+          "type": "char",
+          "named": true
+        },
+        {
+          "type": "comptime_block",
           "named": true
         },
         {
@@ -7494,10 +9039,6 @@
           "named": true
         },
         {
-          "type": "line_comment",
-          "named": true
-        },
-        {
           "type": "loop_expr",
           "named": true
         },
@@ -7519,6 +9060,14 @@
         },
         {
           "type": "return_expr",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        },
+        {
+          "type": "string_block",
           "named": true
         },
         {
@@ -7541,6 +9090,14 @@
       "required": false,
       "types": [
         {
+          "type": "array_copy_init",
+          "named": true
+        },
+        {
+          "type": "array_list_init",
+          "named": true
+        },
+        {
           "type": "binop_add",
           "named": true
         },
@@ -7705,7 +9262,19 @@
           "named": true
         },
         {
+          "type": "bool_literal",
+          "named": true
+        },
+        {
           "type": "break_expr",
+          "named": true
+        },
+        {
+          "type": "char",
+          "named": true
+        },
+        {
+          "type": "comptime_block",
           "named": true
         },
         {
@@ -7737,10 +9306,6 @@
           "named": true
         },
         {
-          "type": "line_comment",
-          "named": true
-        },
-        {
           "type": "loop_expr",
           "named": true
         },
@@ -7762,6 +9327,14 @@
         },
         {
           "type": "return_expr",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        },
+        {
+          "type": "string_block",
           "named": true
         },
         {
@@ -7784,6 +9357,14 @@
       "required": false,
       "types": [
         {
+          "type": "array_copy_init",
+          "named": true
+        },
+        {
+          "type": "array_list_init",
+          "named": true
+        },
+        {
           "type": "binop_add",
           "named": true
         },
@@ -7948,7 +9529,19 @@
           "named": true
         },
         {
+          "type": "bool_literal",
+          "named": true
+        },
+        {
           "type": "break_expr",
+          "named": true
+        },
+        {
+          "type": "char",
+          "named": true
+        },
+        {
+          "type": "comptime_block",
           "named": true
         },
         {
@@ -7980,10 +9573,6 @@
           "named": true
         },
         {
-          "type": "line_comment",
-          "named": true
-        },
-        {
           "type": "loop_expr",
           "named": true
         },
@@ -8005,6 +9594,14 @@
         },
         {
           "type": "return_expr",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        },
+        {
+          "type": "string_block",
           "named": true
         },
         {
@@ -8027,6 +9624,14 @@
       "required": false,
       "types": [
         {
+          "type": "array_copy_init",
+          "named": true
+        },
+        {
+          "type": "array_list_init",
+          "named": true
+        },
+        {
           "type": "binop_add",
           "named": true
         },
@@ -8191,7 +9796,19 @@
           "named": true
         },
         {
+          "type": "bool_literal",
+          "named": true
+        },
+        {
           "type": "break_expr",
+          "named": true
+        },
+        {
+          "type": "char",
+          "named": true
+        },
+        {
+          "type": "comptime_block",
           "named": true
         },
         {
@@ -8223,10 +9840,6 @@
           "named": true
         },
         {
-          "type": "line_comment",
-          "named": true
-        },
-        {
           "type": "loop_expr",
           "named": true
         },
@@ -8248,6 +9861,14 @@
         },
         {
           "type": "return_expr",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        },
+        {
+          "type": "string_block",
           "named": true
         },
         {
@@ -8270,6 +9891,14 @@
       "required": false,
       "types": [
         {
+          "type": "array_copy_init",
+          "named": true
+        },
+        {
+          "type": "array_list_init",
+          "named": true
+        },
+        {
           "type": "binop_add",
           "named": true
         },
@@ -8434,7 +10063,19 @@
           "named": true
         },
         {
+          "type": "bool_literal",
+          "named": true
+        },
+        {
           "type": "break_expr",
+          "named": true
+        },
+        {
+          "type": "char",
+          "named": true
+        },
+        {
+          "type": "comptime_block",
           "named": true
         },
         {
@@ -8466,10 +10107,6 @@
           "named": true
         },
         {
-          "type": "line_comment",
-          "named": true
-        },
-        {
           "type": "loop_expr",
           "named": true
         },
@@ -8491,6 +10128,14 @@
         },
         {
           "type": "return_expr",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        },
+        {
+          "type": "string_block",
           "named": true
         },
         {
@@ -8513,6 +10158,14 @@
       "required": false,
       "types": [
         {
+          "type": "array_copy_init",
+          "named": true
+        },
+        {
+          "type": "array_list_init",
+          "named": true
+        },
+        {
           "type": "binop_add",
           "named": true
         },
@@ -8677,7 +10330,19 @@
           "named": true
         },
         {
+          "type": "bool_literal",
+          "named": true
+        },
+        {
           "type": "break_expr",
+          "named": true
+        },
+        {
+          "type": "char",
+          "named": true
+        },
+        {
+          "type": "comptime_block",
           "named": true
         },
         {
@@ -8709,10 +10374,6 @@
           "named": true
         },
         {
-          "type": "line_comment",
-          "named": true
-        },
-        {
           "type": "loop_expr",
           "named": true
         },
@@ -8734,6 +10395,14 @@
         },
         {
           "type": "return_expr",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        },
+        {
+          "type": "string_block",
           "named": true
         },
         {
@@ -8756,6 +10425,14 @@
       "required": false,
       "types": [
         {
+          "type": "array_copy_init",
+          "named": true
+        },
+        {
+          "type": "array_list_init",
+          "named": true
+        },
+        {
           "type": "binop_add",
           "named": true
         },
@@ -8920,7 +10597,19 @@
           "named": true
         },
         {
+          "type": "bool_literal",
+          "named": true
+        },
+        {
           "type": "break_expr",
+          "named": true
+        },
+        {
+          "type": "char",
+          "named": true
+        },
+        {
+          "type": "comptime_block",
           "named": true
         },
         {
@@ -8952,10 +10641,6 @@
           "named": true
         },
         {
-          "type": "line_comment",
-          "named": true
-        },
-        {
           "type": "loop_expr",
           "named": true
         },
@@ -8977,6 +10662,14 @@
         },
         {
           "type": "return_expr",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        },
+        {
+          "type": "string_block",
           "named": true
         },
         {
@@ -8999,6 +10692,14 @@
       "required": false,
       "types": [
         {
+          "type": "array_copy_init",
+          "named": true
+        },
+        {
+          "type": "array_list_init",
+          "named": true
+        },
+        {
           "type": "binop_add",
           "named": true
         },
@@ -9163,7 +10864,19 @@
           "named": true
         },
         {
+          "type": "bool_literal",
+          "named": true
+        },
+        {
           "type": "break_expr",
+          "named": true
+        },
+        {
+          "type": "char",
+          "named": true
+        },
+        {
+          "type": "comptime_block",
           "named": true
         },
         {
@@ -9195,10 +10908,6 @@
           "named": true
         },
         {
-          "type": "line_comment",
-          "named": true
-        },
-        {
           "type": "loop_expr",
           "named": true
         },
@@ -9220,6 +10929,14 @@
         },
         {
           "type": "return_expr",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        },
+        {
+          "type": "string_block",
           "named": true
         },
         {
@@ -9242,6 +10959,14 @@
       "required": false,
       "types": [
         {
+          "type": "array_copy_init",
+          "named": true
+        },
+        {
+          "type": "array_list_init",
+          "named": true
+        },
+        {
           "type": "binop_add",
           "named": true
         },
@@ -9406,7 +11131,19 @@
           "named": true
         },
         {
+          "type": "bool_literal",
+          "named": true
+        },
+        {
           "type": "break_expr",
+          "named": true
+        },
+        {
+          "type": "char",
+          "named": true
+        },
+        {
+          "type": "comptime_block",
           "named": true
         },
         {
@@ -9438,10 +11175,6 @@
           "named": true
         },
         {
-          "type": "line_comment",
-          "named": true
-        },
-        {
           "type": "loop_expr",
           "named": true
         },
@@ -9463,6 +11196,14 @@
         },
         {
           "type": "return_expr",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        },
+        {
+          "type": "string_block",
           "named": true
         },
         {
@@ -9485,6 +11226,14 @@
       "required": false,
       "types": [
         {
+          "type": "array_copy_init",
+          "named": true
+        },
+        {
+          "type": "array_list_init",
+          "named": true
+        },
+        {
           "type": "binop_add",
           "named": true
         },
@@ -9649,7 +11398,19 @@
           "named": true
         },
         {
+          "type": "bool_literal",
+          "named": true
+        },
+        {
           "type": "break_expr",
+          "named": true
+        },
+        {
+          "type": "char",
+          "named": true
+        },
+        {
+          "type": "comptime_block",
           "named": true
         },
         {
@@ -9681,10 +11442,6 @@
           "named": true
         },
         {
-          "type": "line_comment",
-          "named": true
-        },
-        {
           "type": "loop_expr",
           "named": true
         },
@@ -9706,6 +11463,14 @@
         },
         {
           "type": "return_expr",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        },
+        {
+          "type": "string_block",
           "named": true
         },
         {
@@ -9728,6 +11493,14 @@
       "required": false,
       "types": [
         {
+          "type": "array_copy_init",
+          "named": true
+        },
+        {
+          "type": "array_list_init",
+          "named": true
+        },
+        {
           "type": "binop_add",
           "named": true
         },
@@ -9892,7 +11665,19 @@
           "named": true
         },
         {
+          "type": "bool_literal",
+          "named": true
+        },
+        {
           "type": "break_expr",
+          "named": true
+        },
+        {
+          "type": "char",
+          "named": true
+        },
+        {
+          "type": "comptime_block",
           "named": true
         },
         {
@@ -9912,6 +11697,10 @@
           "named": true
         },
         {
+          "type": "if_statement",
+          "named": true
+        },
+        {
           "type": "index_expr",
           "named": true
         },
@@ -9921,10 +11710,6 @@
         },
         {
           "type": "let",
-          "named": true
-        },
-        {
-          "type": "line_comment",
           "named": true
         },
         {
@@ -9949,6 +11734,14 @@
         },
         {
           "type": "return_expr",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        },
+        {
+          "type": "string_block",
           "named": true
         },
         {
@@ -9963,6 +11756,11 @@
     }
   },
   {
+    "type": "bool_literal",
+    "named": true,
+    "fields": {}
+  },
+  {
     "type": "break_expr",
     "named": true,
     "fields": {},
@@ -9970,6 +11768,14 @@
       "multiple": true,
       "required": false,
       "types": [
+        {
+          "type": "array_copy_init",
+          "named": true
+        },
+        {
+          "type": "array_list_init",
+          "named": true
+        },
         {
           "type": "binop_add",
           "named": true
@@ -10135,7 +11941,19 @@
           "named": true
         },
         {
+          "type": "bool_literal",
+          "named": true
+        },
+        {
           "type": "break_expr",
+          "named": true
+        },
+        {
+          "type": "char",
+          "named": true
+        },
+        {
+          "type": "comptime_block",
           "named": true
         },
         {
@@ -10167,10 +11985,6 @@
           "named": true
         },
         {
-          "type": "line_comment",
-          "named": true
-        },
-        {
           "type": "loop_expr",
           "named": true
         },
@@ -10192,6 +12006,14 @@
         },
         {
           "type": "return_expr",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        },
+        {
+          "type": "string_block",
           "named": true
         },
         {
@@ -10214,6 +12036,14 @@
       "required": false,
       "types": [
         {
+          "type": "array_copy_init",
+          "named": true
+        },
+        {
+          "type": "array_list_init",
+          "named": true
+        },
+        {
           "type": "binop_add",
           "named": true
         },
@@ -10378,7 +12208,19 @@
           "named": true
         },
         {
+          "type": "bool_literal",
+          "named": true
+        },
+        {
           "type": "break_expr",
+          "named": true
+        },
+        {
+          "type": "char",
+          "named": true
+        },
+        {
+          "type": "comptime_block",
           "named": true
         },
         {
@@ -10410,10 +12252,6 @@
           "named": true
         },
         {
-          "type": "line_comment",
-          "named": true
-        },
-        {
           "type": "loop_expr",
           "named": true
         },
@@ -10435,6 +12273,14 @@
         },
         {
           "type": "return_expr",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        },
+        {
+          "type": "string_block",
           "named": true
         },
         {
@@ -10461,11 +12307,7 @@
           "named": true
         },
         {
-          "type": "comptime_block",
-          "named": true
-        },
-        {
-          "type": "line_comment",
+          "type": "qual_comptime",
           "named": true
         }
       ]
@@ -10479,6 +12321,14 @@
       "multiple": true,
       "required": true,
       "types": [
+        {
+          "type": "array_copy_init",
+          "named": true
+        },
+        {
+          "type": "array_list_init",
+          "named": true
+        },
         {
           "type": "binop_add",
           "named": true
@@ -10644,7 +12494,19 @@
           "named": true
         },
         {
+          "type": "bool_literal",
+          "named": true
+        },
+        {
           "type": "break_expr",
+          "named": true
+        },
+        {
+          "type": "char",
+          "named": true
+        },
+        {
+          "type": "comptime_block",
           "named": true
         },
         {
@@ -10676,10 +12538,6 @@
           "named": true
         },
         {
-          "type": "line_comment",
-          "named": true
-        },
-        {
           "type": "loop_expr",
           "named": true
         },
@@ -10701,6 +12559,14 @@
         },
         {
           "type": "return_expr",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        },
+        {
+          "type": "string_block",
           "named": true
         },
         {
@@ -10743,6 +12609,11 @@
     }
   },
   {
+    "type": "empty_type",
+    "named": true,
+    "fields": {}
+  },
+  {
     "type": "env_def",
     "named": true,
     "fields": {},
@@ -10750,6 +12621,14 @@
       "multiple": true,
       "required": false,
       "types": [
+        {
+          "type": "array_copy_init",
+          "named": true
+        },
+        {
+          "type": "array_list_init",
+          "named": true
+        },
         {
           "type": "binop_add",
           "named": true
@@ -10915,7 +12794,19 @@
           "named": true
         },
         {
+          "type": "bool_literal",
+          "named": true
+        },
+        {
           "type": "break_expr",
+          "named": true
+        },
+        {
+          "type": "char",
+          "named": true
+        },
+        {
+          "type": "comptime_block",
           "named": true
         },
         {
@@ -10947,10 +12838,6 @@
           "named": true
         },
         {
-          "type": "line_comment",
-          "named": true
-        },
-        {
           "type": "loop_expr",
           "named": true
         },
@@ -10972,6 +12859,14 @@
         },
         {
           "type": "return_expr",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        },
+        {
+          "type": "string_block",
           "named": true
         },
         {
@@ -11037,10 +12932,6 @@
       "required": true,
       "types": [
         {
-          "type": "line_comment",
-          "named": true
-        },
-        {
           "type": "qual_comptime",
           "named": true
         },
@@ -11092,10 +12983,6 @@
         },
         {
           "type": "fn_params",
-          "named": true
-        },
-        {
-          "type": "line_comment",
           "named": true
         },
         {
@@ -11160,6 +13047,14 @@
       "required": true,
       "types": [
         {
+          "type": "array_copy_init",
+          "named": true
+        },
+        {
+          "type": "array_list_init",
+          "named": true
+        },
+        {
           "type": "binop_add",
           "named": true
         },
@@ -11324,7 +13219,19 @@
           "named": true
         },
         {
+          "type": "bool_literal",
+          "named": true
+        },
+        {
           "type": "break_expr",
+          "named": true
+        },
+        {
+          "type": "char",
+          "named": true
+        },
+        {
+          "type": "comptime_block",
           "named": true
         },
         {
@@ -11356,7 +13263,270 @@
           "named": true
         },
         {
-          "type": "line_comment",
+          "type": "loop_expr",
+          "named": true
+        },
+        {
+          "type": "method_expr",
+          "named": true
+        },
+        {
+          "type": "num_literal",
+          "named": true
+        },
+        {
+          "type": "range_incl_op",
+          "named": true
+        },
+        {
+          "type": "range_op",
+          "named": true
+        },
+        {
+          "type": "return_expr",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        },
+        {
+          "type": "string_block",
+          "named": true
+        },
+        {
+          "type": "unary_op",
+          "named": true
+        },
+        {
+          "type": "var_expr",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "if_statement",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "array_copy_init",
+          "named": true
+        },
+        {
+          "type": "array_list_init",
+          "named": true
+        },
+        {
+          "type": "binop_add",
+          "named": true
+        },
+        {
+          "type": "binop_add_assign",
+          "named": true
+        },
+        {
+          "type": "binop_and",
+          "named": true
+        },
+        {
+          "type": "binop_and_assign",
+          "named": true
+        },
+        {
+          "type": "binop_assign",
+          "named": true
+        },
+        {
+          "type": "binop_div",
+          "named": true
+        },
+        {
+          "type": "binop_div_assign",
+          "named": true
+        },
+        {
+          "type": "binop_eq",
+          "named": true
+        },
+        {
+          "type": "binop_geq",
+          "named": true
+        },
+        {
+          "type": "binop_gt",
+          "named": true
+        },
+        {
+          "type": "binop_land",
+          "named": true
+        },
+        {
+          "type": "binop_leq",
+          "named": true
+        },
+        {
+          "type": "binop_lor",
+          "named": true
+        },
+        {
+          "type": "binop_lt",
+          "named": true
+        },
+        {
+          "type": "binop_lxor",
+          "named": true
+        },
+        {
+          "type": "binop_mul",
+          "named": true
+        },
+        {
+          "type": "binop_mul_assign",
+          "named": true
+        },
+        {
+          "type": "binop_or",
+          "named": true
+        },
+        {
+          "type": "binop_or_assign",
+          "named": true
+        },
+        {
+          "type": "binop_rem",
+          "named": true
+        },
+        {
+          "type": "binop_rem_assign",
+          "named": true
+        },
+        {
+          "type": "binop_set",
+          "named": true
+        },
+        {
+          "type": "binop_set_add",
+          "named": true
+        },
+        {
+          "type": "binop_set_and",
+          "named": true
+        },
+        {
+          "type": "binop_set_div",
+          "named": true
+        },
+        {
+          "type": "binop_set_mul",
+          "named": true
+        },
+        {
+          "type": "binop_set_or",
+          "named": true
+        },
+        {
+          "type": "binop_set_rem",
+          "named": true
+        },
+        {
+          "type": "binop_set_shl",
+          "named": true
+        },
+        {
+          "type": "binop_set_shr",
+          "named": true
+        },
+        {
+          "type": "binop_set_sub",
+          "named": true
+        },
+        {
+          "type": "binop_set_xor",
+          "named": true
+        },
+        {
+          "type": "binop_shl",
+          "named": true
+        },
+        {
+          "type": "binop_shl_assign",
+          "named": true
+        },
+        {
+          "type": "binop_shr",
+          "named": true
+        },
+        {
+          "type": "binop_shr_assign",
+          "named": true
+        },
+        {
+          "type": "binop_sub",
+          "named": true
+        },
+        {
+          "type": "binop_sub_assign",
+          "named": true
+        },
+        {
+          "type": "binop_xor",
+          "named": true
+        },
+        {
+          "type": "binop_xor_assign",
+          "named": true
+        },
+        {
+          "type": "block_expr",
+          "named": true
+        },
+        {
+          "type": "bool_literal",
+          "named": true
+        },
+        {
+          "type": "break_expr",
+          "named": true
+        },
+        {
+          "type": "char",
+          "named": true
+        },
+        {
+          "type": "comptime_block",
+          "named": true
+        },
+        {
+          "type": "continue_expr",
+          "named": true
+        },
+        {
+          "type": "field_expr",
+          "named": true
+        },
+        {
+          "type": "function_call",
+          "named": true
+        },
+        {
+          "type": "if_expr",
+          "named": true
+        },
+        {
+          "type": "index_expr",
+          "named": true
+        },
+        {
+          "type": "inv_op",
+          "named": true
+        },
+        {
+          "type": "let",
           "named": true
         },
         {
@@ -11381,6 +13551,14 @@
         },
         {
           "type": "return_expr",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        },
+        {
+          "type": "string_block",
           "named": true
         },
         {
@@ -11403,6 +13581,14 @@
       "required": false,
       "types": [
         {
+          "type": "array_copy_init",
+          "named": true
+        },
+        {
+          "type": "array_list_init",
+          "named": true
+        },
+        {
           "type": "binop_add",
           "named": true
         },
@@ -11567,7 +13753,19 @@
           "named": true
         },
         {
+          "type": "bool_literal",
+          "named": true
+        },
+        {
           "type": "break_expr",
+          "named": true
+        },
+        {
+          "type": "char",
+          "named": true
+        },
+        {
+          "type": "comptime_block",
           "named": true
         },
         {
@@ -11599,10 +13797,6 @@
           "named": true
         },
         {
-          "type": "line_comment",
-          "named": true
-        },
-        {
           "type": "loop_expr",
           "named": true
         },
@@ -11624,6 +13818,14 @@
         },
         {
           "type": "return_expr",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        },
+        {
+          "type": "string_block",
           "named": true
         },
         {
@@ -11651,6 +13853,14 @@
       "required": false,
       "types": [
         {
+          "type": "array_copy_init",
+          "named": true
+        },
+        {
+          "type": "array_list_init",
+          "named": true
+        },
+        {
           "type": "binop_add",
           "named": true
         },
@@ -11815,7 +14025,19 @@
           "named": true
         },
         {
+          "type": "bool_literal",
+          "named": true
+        },
+        {
           "type": "break_expr",
+          "named": true
+        },
+        {
+          "type": "char",
+          "named": true
+        },
+        {
+          "type": "comptime_block",
           "named": true
         },
         {
@@ -11847,10 +14069,6 @@
           "named": true
         },
         {
-          "type": "line_comment",
-          "named": true
-        },
-        {
           "type": "loop_expr",
           "named": true
         },
@@ -11872,6 +14090,14 @@
         },
         {
           "type": "return_expr",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        },
+        {
+          "type": "string_block",
           "named": true
         },
         {
@@ -11918,10 +14144,6 @@
           "named": true
         },
         {
-          "type": "line_comment",
-          "named": true
-        },
-        {
           "type": "mod",
           "named": true
         },
@@ -11940,6 +14162,14 @@
       "multiple": true,
       "required": true,
       "types": [
+        {
+          "type": "array_copy_init",
+          "named": true
+        },
+        {
+          "type": "array_list_init",
+          "named": true
+        },
         {
           "type": "binop_add",
           "named": true
@@ -12105,7 +14335,19 @@
           "named": true
         },
         {
+          "type": "bool_literal",
+          "named": true
+        },
+        {
           "type": "break_expr",
+          "named": true
+        },
+        {
+          "type": "char",
+          "named": true
+        },
+        {
+          "type": "comptime_block",
           "named": true
         },
         {
@@ -12137,10 +14379,6 @@
           "named": true
         },
         {
-          "type": "line_comment",
-          "named": true
-        },
-        {
           "type": "loop_expr",
           "named": true
         },
@@ -12166,6 +14404,14 @@
         },
         {
           "type": "return_expr",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        },
+        {
+          "type": "string_block",
           "named": true
         },
         {
@@ -12197,15 +14443,11 @@
     "named": true,
     "fields": {},
     "children": {
-      "multiple": true,
+      "multiple": false,
       "required": true,
       "types": [
         {
           "type": "block_expr",
-          "named": true
-        },
-        {
-          "type": "line_comment",
           "named": true
         }
       ]
@@ -12236,6 +14478,11 @@
     "fields": {}
   },
   {
+    "type": "never_type",
+    "named": true,
+    "fields": {}
+  },
+  {
     "type": "num_literal",
     "named": true,
     "fields": {}
@@ -12253,6 +14500,14 @@
       "multiple": true,
       "required": false,
       "types": [
+        {
+          "type": "array_copy_init",
+          "named": true
+        },
+        {
+          "type": "array_list_init",
+          "named": true
+        },
         {
           "type": "binop_add",
           "named": true
@@ -12418,7 +14673,19 @@
           "named": true
         },
         {
+          "type": "bool_literal",
+          "named": true
+        },
+        {
           "type": "break_expr",
+          "named": true
+        },
+        {
+          "type": "char",
+          "named": true
+        },
+        {
+          "type": "comptime_block",
           "named": true
         },
         {
@@ -12450,10 +14717,6 @@
           "named": true
         },
         {
-          "type": "line_comment",
-          "named": true
-        },
-        {
           "type": "loop_expr",
           "named": true
         },
@@ -12475,6 +14738,14 @@
         },
         {
           "type": "return_expr",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        },
+        {
+          "type": "string_block",
           "named": true
         },
         {
@@ -12497,6 +14768,14 @@
       "required": false,
       "types": [
         {
+          "type": "array_copy_init",
+          "named": true
+        },
+        {
+          "type": "array_list_init",
+          "named": true
+        },
+        {
           "type": "binop_add",
           "named": true
         },
@@ -12661,7 +14940,19 @@
           "named": true
         },
         {
+          "type": "bool_literal",
+          "named": true
+        },
+        {
           "type": "break_expr",
+          "named": true
+        },
+        {
+          "type": "char",
+          "named": true
+        },
+        {
+          "type": "comptime_block",
           "named": true
         },
         {
@@ -12693,10 +14984,6 @@
           "named": true
         },
         {
-          "type": "line_comment",
-          "named": true
-        },
-        {
           "type": "loop_expr",
           "named": true
         },
@@ -12718,6 +15005,14 @@
         },
         {
           "type": "return_expr",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        },
+        {
+          "type": "string_block",
           "named": true
         },
         {
@@ -12732,6 +15027,34 @@
     }
   },
   {
+    "type": "ref_punct",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "reference_type",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "qual_mut",
+          "named": true
+        },
+        {
+          "type": "ref_punct",
+          "named": true
+        },
+        {
+          "type": "type",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "return_expr",
     "named": true,
     "fields": {},
@@ -12739,6 +15062,14 @@
       "multiple": true,
       "required": false,
       "types": [
+        {
+          "type": "array_copy_init",
+          "named": true
+        },
+        {
+          "type": "array_list_init",
+          "named": true
+        },
         {
           "type": "binop_add",
           "named": true
@@ -12904,7 +15235,19 @@
           "named": true
         },
         {
+          "type": "bool_literal",
+          "named": true
+        },
+        {
           "type": "break_expr",
+          "named": true
+        },
+        {
+          "type": "char",
+          "named": true
+        },
+        {
+          "type": "comptime_block",
           "named": true
         },
         {
@@ -12936,10 +15279,6 @@
           "named": true
         },
         {
-          "type": "line_comment",
-          "named": true
-        },
-        {
           "type": "loop_expr",
           "named": true
         },
@@ -12961,6 +15300,14 @@
         },
         {
           "type": "return_expr",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        },
+        {
+          "type": "string_block",
           "named": true
         },
         {
@@ -12979,11 +15326,45 @@
     "named": true,
     "fields": {},
     "children": {
-      "multiple": false,
+      "multiple": true,
       "required": false,
       "types": [
         {
           "type": "qual_mut",
+          "named": true
+        },
+        {
+          "type": "ref_punct",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "slice_type",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "type",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "tuple_type",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "type",
           "named": true
         }
       ]
@@ -12998,7 +15379,35 @@
       "required": false,
       "types": [
         {
+          "type": "array_type",
+          "named": true
+        },
+        {
+          "type": "empty_type",
+          "named": true
+        },
+        {
           "type": "env_def",
+          "named": true
+        },
+        {
+          "type": "never_type",
+          "named": true
+        },
+        {
+          "type": "reference_type",
+          "named": true
+        },
+        {
+          "type": "self_type",
+          "named": true
+        },
+        {
+          "type": "slice_type",
+          "named": true
+        },
+        {
+          "type": "tuple_type",
           "named": true
         }
       ]
@@ -13012,6 +15421,14 @@
       "multiple": true,
       "required": false,
       "types": [
+        {
+          "type": "array_copy_init",
+          "named": true
+        },
+        {
+          "type": "array_list_init",
+          "named": true
+        },
         {
           "type": "binop_add",
           "named": true
@@ -13177,7 +15594,19 @@
           "named": true
         },
         {
+          "type": "bool_literal",
+          "named": true
+        },
+        {
           "type": "break_expr",
+          "named": true
+        },
+        {
+          "type": "char",
+          "named": true
+        },
+        {
+          "type": "comptime_block",
           "named": true
         },
         {
@@ -13209,10 +15638,6 @@
           "named": true
         },
         {
-          "type": "line_comment",
-          "named": true
-        },
-        {
           "type": "loop_expr",
           "named": true
         },
@@ -13234,6 +15659,14 @@
         },
         {
           "type": "return_expr",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        },
+        {
+          "type": "string_block",
           "named": true
         },
         {
@@ -13492,6 +15925,10 @@
     "named": false
   },
   {
+    "type": "char",
+    "named": true
+  },
+  {
     "type": "const",
     "named": false
   },
@@ -13508,7 +15945,7 @@
     "named": false
   },
   {
-    "type": "external",
+    "type": "extern",
     "named": false
   },
   {
@@ -13517,6 +15954,10 @@
   },
   {
     "type": "f64",
+    "named": false
+  },
+  {
+    "type": "false",
     "named": false
   },
   {
@@ -13581,6 +16022,22 @@
   },
   {
     "type": "self",
+    "named": false
+  },
+  {
+    "type": "self_type",
+    "named": true
+  },
+  {
+    "type": "string",
+    "named": true
+  },
+  {
+    "type": "string_block",
+    "named": true
+  },
+  {
+    "type": "true",
     "named": false
   },
   {

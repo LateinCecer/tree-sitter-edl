@@ -20,7 +20,8 @@ let a: Some<A, B, C> = some;
                         (type_name))
                     (type
                         (type_name))))
-            (var_expr))))
+            (var_expr
+                (type_name)))))
 
 ===============
 Parameter Env 1
@@ -39,7 +40,8 @@ let a: Some<D, E> = some;
                 (env_def
                     (type (type_name))
                     (type (type_name))))
-            (var_expr))))
+            (var_expr
+                (type_name)))))
 
 ===============
 Parameter Env 2
@@ -61,7 +63,8 @@ let a: Some<A, B, C, D, E> = some;
                     (type (type_name))
                     (type (type_name))
                     (type (type_name))))
-            (var_expr))))
+            (var_expr
+                (type_name)))))
 
 ====================
 Simple let statement
@@ -75,7 +78,8 @@ let a = some;
     (item
         (let
             (var_name)
-            (var_expr))))
+            (var_expr
+                (type_name)))))
 
 =============
 let with type
@@ -90,7 +94,8 @@ let a: usize = some;
         (let
             (var_name)
             (type (type_name (builtin_type)))
-            (var_expr))))
+            (var_expr
+                (type_name)))))
 
 ===============
 Parameter Env 3
@@ -109,7 +114,8 @@ let a: Some<D, E,> = some;
                 (env_def
                     (type (type_name))
                     (type (type_name))))
-            (var_expr))))
+            (var_expr
+                (type_name)))))
 
 ===============
 Parameter Env 4
@@ -128,7 +134,8 @@ let a: foo::Some<D> = some;
                 (type_name)
                 (env_def
                     (type (type_name))))
-            (var_expr))))
+            (var_expr
+                (type_name)))))
 
 ===============
 Parameter Env 5
@@ -145,7 +152,8 @@ let a: Some<> = some;
             (type
                 (type_name)
                 (env_def))
-            (var_expr))))
+            (var_expr
+                (type_name)))))
 
 ===============
 Parameter Env 6
@@ -164,7 +172,8 @@ let a: Some::<A, B> = some;
                 (env_def
                     (type (type_name))
                     (type (type_name))))
-            (var_expr))))
+            (var_expr
+                (type_name)))))
 
 ===============
 Parameter Env 7
@@ -185,7 +194,8 @@ let a: foo::Some::<A, B>::Output = some;
                     (type (type_name))
                     (type (type_name)))
                 (type_name))
-            (var_expr))))
+            (var_expr
+                (type_name)))))
 
 ===============
 Parameter Env 8
@@ -209,7 +219,8 @@ let a: foo::Some::<A, B>::Output::test::<A> = some;
                 (type_name)
                 (env_def
                     (type (type_name))))
-            (var_expr))))
+            (var_expr
+                (type_name)))))
 
 ===============
 Parameter Env 9

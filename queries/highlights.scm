@@ -11,7 +11,7 @@
 "break" @keyword.control.repeat
 (continue_expr) @keyword.control.repeat
 "extern" @keyword.control.function
-"self" @keyword.storage.type
+"self" @variable.builtin
 (self_type) @type.builtin
 ; "struct" @keyword
 ; "enum" @keyword
@@ -110,8 +110,8 @@
     (fn_params
         (fn_param) @variable.parameter))
 (function_name_segment) @function
-(method_expr
-    (function_name_segment) @function.method)
+; (method_expr
+;     (function_name_segment) @function.method)
 (var_func_name) @function
 
 ; comments

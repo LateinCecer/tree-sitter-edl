@@ -7,6 +7,7 @@ module.exports = grammar({
 
     conflicts: $ => [
         [$.var_expr, $.type_name],
+        [$.var_expr, $.type],
         [$.type_name, $.function_name_segment],
     ],
 
@@ -109,7 +110,7 @@ module.exports = grammar({
         ),
 
         var_name: ($) => $._ident,
-        var_expr: ($) => $._ident,
+        var_expr: ($) => $._base_type,
 
         fn_def: ($) => seq(field("signature", $.fn_signature), $.block_expr),
         fn_extern: ($) => seq($.qual_external, field("signature", $.fn_signature), ";"),
@@ -236,7 +237,6 @@ module.exports = grammar({
         /* binary expressions */
         _expr: ($) => choice(
             $._non_closing_expr,
-            $._self_closing_expr,
         ),
 
         _self_closing_expr: ($) => choice(
@@ -381,20 +381,22 @@ module.exports = grammar({
             /* the main part of the expression goes here */
             prec(2, choice(
                 $.var_expr,
-                $.function_call,
+                // $.function_call,
                 $.num_literal,
                 $.string,
                 $.string_block,
                 $.char,
                 $.bool_literal,
                 $._array_init,
+                $._self_closing_expr,
                 seq("(", $._expr, ")"),
             )),
             prec(3, optional(choice($.range_op, $.range_incl_op))),
             /* we can put trailing expressions here, like fields, method calls or index operators */
             prec(1, repeat(choice(
+                $.call_params,
                 $.field_expr,
-                $.method_expr,
+                // $.method_expr,
                 $.index_expr,
             ))),
         )),
@@ -494,7 +496,7 @@ module.exports = grammar({
         range_op: ($) => seq("..", $._primary_expr),
         range_incl_op: ($) => seq("..=", $._primary_expr),
 
-        field_name: ($) => $._ident,
+        field_name: ($) => seq($.function_name_segment, optional(seq("::", $.env_def))),
 
         function_call: ($) => seq(
             $.function_name,

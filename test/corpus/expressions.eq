@@ -11,24 +11,24 @@ let _ = std::field::BoundaryField::<f64, 2, DIM>::zeros::<NSIZE>(domain);
     (item
         (let
             (var_name)
-            (function_call
-                (function_name
-                    (function_name_segment)
-                    (function_name_segment)
-                    (function_name_segment)
-                    (env_def
-                        (type
-                            (type_name
-                                (builtin_type)))
-                        (num_literal)
-                        (type
-                            (type_name)))
-                    (function_name_segment)
-                    (env_def
-                        (type
-                            (type_name))))
-                (call_params
-                    (var_expr))))))
+            (var_expr
+                (type_name)
+                (type_name)
+                (type_name)
+                (env_def
+                    (type
+                        (type_name
+                            (builtin_type)))
+                    (num_literal)
+                    (type
+                        (type_name)))
+                (type_name)
+                (env_def
+                    (type
+                        (type_name))))
+            (call_params
+                (var_expr
+                    (type_name))))))
 
 ====================
 Simple Function Call
@@ -42,11 +42,11 @@ let _ = println(hello);
     (item
         (let
             (var_name)
-            (function_call
-                (function_name
-                    (function_name_segment))
-                (call_params
-                    (var_expr))))))
+            (var_expr
+                (type_name))
+            (call_params
+                (var_expr
+                    (type_name))))))
 
 ================
 Number Literal 1
@@ -229,9 +229,11 @@ let _ = a.field;
     (item
         (let
             (var_name)
-            (var_expr)
+            (var_expr
+                (type_name))
             (field_expr
-                (field_name)))))
+                (field_name
+                    (function_name_segment))))))
 
 ================
 Field on integer
@@ -247,7 +249,8 @@ let _ = (5).field;
             (var_name)
             (num_literal)
             (field_expr
-                (field_name)))))
+                (field_name
+                    (function_name_segment))))))
 
 ==============
 Field on float
@@ -263,7 +266,8 @@ let _ = 5.0.field;
             (var_name)
             (num_literal)
             (field_expr
-                (field_name)))))
+                (field_name
+                    (function_name_segment))))))
 
 =========================
 Field on number with hint
@@ -280,13 +284,15 @@ let _ = 5.2e-3.field;
             (var_name)
             (num_literal)
             (field_expr
-                (field_name))))
+                (field_name
+                    (function_name_segment)))))
     (item
         (let
             (var_name)
             (num_literal)
             (field_expr
-                (field_name)))))
+                (field_name
+                    (function_name_segment))))))
 
 ============
 Method calls
@@ -301,26 +307,32 @@ let _ = var.method::<f32, 2>(a, 2.3);
     (item
         (let
             (var_name)
-            (var_expr)
-            (method_expr
-                (function_name_segment)
-                (call_params
-                    (var_expr)
-                    (num_literal)))))
+            (var_expr
+                (type_name))
+            (field_expr
+                (field_name
+                    (function_name_segment)))
+            (call_params
+                (var_expr
+                    (type_name))
+                (num_literal))))
     (item
         (let
             (var_name)
-            (var_expr)
-            (method_expr
-                (function_name_segment)
-                (env_def
-                    (type
-                        (type_name
-                            (builtin_type)))
-                    (num_literal))
-                (call_params
-                    (var_expr)
-                    (num_literal))))))
+            (var_expr
+                (type_name))
+            (field_expr
+                (field_name
+                    (function_name_segment)
+                    (env_def
+                        (type
+                            (type_name
+                                (builtin_type)))
+                        (num_literal))))
+            (call_params
+                (var_expr
+                    (type_name))
+                (num_literal)))))
 
 ===============
 Prefix Operator
@@ -381,10 +393,12 @@ let _ = a + 2.0 * b;
         (let
             (var_name)
             (binop_add
-                (var_expr)
+                (var_expr
+                    (type_name))
                 (binop_mul
                     (num_literal)
-                    (var_expr))))))
+                    (var_expr
+                        (type_name)))))))
 
 ====================
 Test Const Statement
@@ -428,8 +442,10 @@ let some_block = {
                     (var_name)
                     (num_literal))
                 (binop_add
-                    (var_expr)
-                    (var_expr))))))
+                    (var_expr
+                        (type_name))
+                    (var_expr
+                        (type_name)))))))
 
 =============================
 Test Self-Closing Expressions
@@ -454,12 +470,12 @@ let some_block = {
                         (num_literal)
                         (num_literal))
                     (block_expr
-                        (function_call
-                            (function_name
-                                (function_name_segment)
-                                (function_name_segment))
-                            (call_params
-                                (var_expr)))))
+                        (var_expr
+                            (type_name)
+                            (type_name))
+                        (call_params
+                            (var_expr
+                                (type_name)))))
                 (let
                     (var_name)
                     (num_literal))))))

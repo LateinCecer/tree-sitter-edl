@@ -514,7 +514,7 @@
     },
     "var_expr": {
       "type": "SYMBOL",
-      "name": "_ident"
+      "name": "_base_type"
     },
     "fn_def": {
       "type": "SEQ",
@@ -1190,10 +1190,6 @@
         {
           "type": "SYMBOL",
           "name": "_non_closing_expr"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "_self_closing_expr"
         }
       ]
     },
@@ -2311,10 +2307,6 @@
                 },
                 {
                   "type": "SYMBOL",
-                  "name": "function_call"
-                },
-                {
-                  "type": "SYMBOL",
                   "name": "num_literal"
                 },
                 {
@@ -2336,6 +2328,10 @@
                 {
                   "type": "SYMBOL",
                   "name": "_array_init"
+                },
+                {
+                  "type": "SYMBOL",
+                  "name": "_self_closing_expr"
                 },
                 {
                   "type": "SEQ",
@@ -2392,11 +2388,11 @@
                 "members": [
                   {
                     "type": "SYMBOL",
-                    "name": "field_expr"
+                    "name": "call_params"
                   },
                   {
                     "type": "SYMBOL",
-                    "name": "method_expr"
+                    "name": "field_expr"
                   },
                   {
                     "type": "SYMBOL",
@@ -2874,8 +2870,34 @@
       ]
     },
     "field_name": {
-      "type": "SYMBOL",
-      "name": "_ident"
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "function_name_segment"
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SEQ",
+              "members": [
+                {
+                  "type": "STRING",
+                  "value": "::"
+                },
+                {
+                  "type": "SYMBOL",
+                  "name": "env_def"
+                }
+              ]
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        }
+      ]
     },
     "function_call": {
       "type": "SEQ",
@@ -3761,6 +3783,10 @@
     [
       "var_expr",
       "type_name"
+    ],
+    [
+      "var_expr",
+      "type"
     ],
     [
       "type_name",

@@ -48,13 +48,14 @@ let velocity: Field<_, DIM, 1> = Field::new(domain);
 #[target=gpu]
 impl<T, const N: usize, const M: usize> Field<T, N, M> {
     fn create<const NSIZE: usize, const DIM: usize>(domain: Domain<T, NSIZE, DIM>) -> Self {
+        let mut a: usize = 0;
         Field::new(domain);
     }
 }
 
 fn main() {
     // load fields from solver.
-    let loader = FieldLoader::<f64>::new(SAVE_PATH);
+    let loader = comptime { FieldLoader::<f64>::new(SAVE_PATH) };
     let writer = VtkBuilder::<f64, DIM>::new(CONVERT_PATH)
         .insert_geometry(domain.intern());
     // starting to read time-steps...

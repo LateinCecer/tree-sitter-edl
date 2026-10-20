@@ -13,8 +13,9 @@
 "extern" @keyword.control.function
 "self" @variable.builtin
 (self_type) @type.builtin
-; "struct" @keyword
+"type" @keyword
 "struct" @keyword
+"where" @keyword
 ; "enum" @keyword
 ; "union" @keyword
 ; "match" @keyword
@@ -40,9 +41,13 @@
 
     "+"
     "-"
+    "!"
 
     "<<"
     ">>"
+
+    ".."
+    "..="
 
     "&"
 
@@ -89,17 +94,13 @@
 ] @operator
 
 ; decorations
-"(" @punctuation.bracket
-")" @punctuation.bracket
-"{" @punctuation.bracket
-"}" @punctuation.bracket
-"[" @punctuation.bracket
-"]" @punctuation.bracket
+["(" ")" "{" "}" "[" "]" "<>"] @punctuation.bracket
 "->" @punctuation.special
 "," @punctuation.delimiter
 ";" @punctuation.delimiter
 ":" @punctuation.delimiter
 "::" @punctuation.delimiter
+"." @punctuation.delimiter
 
 ; names
 (type_name) @type
@@ -107,6 +108,7 @@
     (builtin_type) @type.builtin)
 (env
     (type_name) @type.parameter)
+(trait_name) @type
 
 (var_name) @variable
 (var_expr) @variable

@@ -164,7 +164,7 @@ module.exports = grammar({
 
         trait_type_def: ($) => seq(
             "type",
-            field("name", $._ident),
+            field("name", $.type_name),
             optional($.env),
             optional(seq(
                 "=",
@@ -175,7 +175,7 @@ module.exports = grammar({
         type_def: ($) => choice(
             seq(
                 "type",
-                field("name", $._ident),
+                field("name", $.type_name),
                 optional($.env),
                 "=",
                 $.type,
@@ -187,7 +187,7 @@ module.exports = grammar({
            or unit struct `type Foo = struct;` */
         struct_def: ($) => seq(
             "type",
-            field("name", $._ident),
+            field("name", $.type_name),
             optional($.env),
             "=",
             "struct",

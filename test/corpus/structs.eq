@@ -109,6 +109,7 @@ type Foo<T, const N: usize> = struct {
   (item
     (type_def
       (struct_def
+        name: (type_name)
         (env
           (type_name)
           (generic_const_def
@@ -167,4 +168,5 @@ type FieldAdd = struct;
 (document
   (item
     (type_def
-      (struct_def))))
+      (struct_def
+        (type_name)))))

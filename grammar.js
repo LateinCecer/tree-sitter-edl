@@ -9,6 +9,7 @@ module.exports = grammar({
         [$.var_expr, $.type_name],
         [$.var_expr, $.type],
         [$.type_name, $.function_name_segment],
+        [$.var_expr, $.struct_literal],
     ],
 
     rules: {
@@ -24,13 +25,13 @@ module.exports = grammar({
                 $.macro,
                 $.mod,
                 $.use,
-                seq($.let, ";"),
-                seq($.const, ";"),
+                seq($.let, $._close),
+                seq($.const, $._close),
                 $.fn_def,
                 $.fn_extern,
                 $.impl,
                 $.trait,
-                $.type_def,
+                seq($.type_def, optional(";")),
             ),
             repeat("\n")
         ),
@@ -171,25 +172,60 @@ module.exports = grammar({
             )),
         ),
 
-        type_def: ($) => seq(
+        type_def: ($) => choice(
+            seq(
+                "type",
+                field("name", $._ident),
+                optional($.env),
+                "=",
+                $.type,
+            ),
+            $.struct_def,
+        ),
+
+        /* struct definition, i.e. `type Foo = struct { a: u32, };`
+           or unit struct `type Foo = struct;` */
+        struct_def: ($) => seq(
             "type",
             field("name", $._ident),
             optional($.env),
             "=",
+            "struct",
+            optional(seq(
+                "{",
+                optional(seq(
+                    $.struct_field,
+                    repeat(seq(",", $.struct_field)),
+                    optional(","),
+                )),
+                "}",
+            )),
+        ),
+
+        /* a single field inside of a struct definition */
+        struct_field: ($) => seq(
+            optional($.qual_async),
+            field("name", $.struct_field_name),
+            ":",
             $.type,
         ),
+
+        /* the name of a struct field, either in a struct definition or in a
+           struct literal */
+        struct_field_name: ($) => $._ident,
 
         /* function signature */
         fn_signature: ($) => seq(
             repeat(choice(
                 $.qual_comptime,
-                $.qual_maybe_comptime
+                $.qual_maybe_comptime,
+                $.qual_async,
             )),
             "fn",
             field("name", $.var_func_name),
             optional($.env),
             $.fn_params,
-            optional(seq("->", $.type)),
+            optional(seq("->", optional($.qual_async), $.type)),
             optional(seq("where"))
         ),
 
@@ -215,11 +251,12 @@ module.exports = grammar({
             )),
             repeat(choice(
                 $.qual_mut,
-                $.qual_comptime
+                $.qual_comptime,
+                $.qual_async,
+                $.qual_shared,
             )),
             field("name", $.var_name),
-            ":",
-            $.type,
+            optional(seq(":", $.type)),
         ),
 
         /* `self`-parameter (with optional mutability qualifier) */
@@ -228,9 +265,21 @@ module.exports = grammar({
                 $.doc_comment,
                 $.macro,
             )),
-            optional($.ref_punct),
-            optional($.qual_mut),
-            "self"
+            choice(
+                /* async or shared self, which must be taken by reference, i.e. `async &self` */
+                seq(
+                    choice($.qual_async, $.qual_shared),
+                    $.ref_punct,
+                    optional($.qual_mut),
+                    "self",
+                ),
+                /* regular self, i.e. `self`, `mut self`, `&self` or `&mut self` */
+                seq(
+                    optional($.ref_punct),
+                    optional($.qual_mut),
+                    "self",
+                ),
+            ),
         ),
 
     
@@ -268,6 +317,7 @@ module.exports = grammar({
             $.binop_leq,
             $.binop_geq,
             $.binop_eq,
+            $.binop_neq,
 
             $.binop_land,
             $.binop_lxor,
@@ -336,6 +386,7 @@ module.exports = grammar({
         binop_leq: ($) => prec.left(5, seq($._expr, "<=", $._expr)),
         binop_geq: ($) => prec.left(5, seq($._expr, ">=", $._expr)),
         binop_eq: ($) => prec.left(5, seq($._expr, "==", $._expr)),
+        binop_neq: ($) => prec.left(5, seq($._expr, "!=", $._expr)),
 
         binop_land: ($) => prec.left(4, seq($._expr, "&&", $._expr)),
 
@@ -381,6 +432,7 @@ module.exports = grammar({
             /* the main part of the expression goes here */
             prec(2, choice(
                 $.var_expr,
+                $.struct_literal,
                 // $.function_call,
                 $.num_literal,
                 $.string,
@@ -496,6 +548,25 @@ module.exports = grammar({
         range_op: ($) => seq("..", $._primary_expr),
         range_incl_op: ($) => seq("..=", $._primary_expr),
 
+        /* struct literal, i.e. `MtId { id: 0, ctx }` */
+        struct_literal: ($) => prec.left(seq(
+            $._base_type,
+            "{",
+            optional(seq(
+                $.struct_literal_field,
+                repeat(seq(",", $.struct_literal_field)),
+                optional(","),
+            )),
+            "}",
+        )),
+
+        /* a single field in a struct literal; fields can either be specified
+           using their value (`id: 0`) or shorthand (`ctx`) */
+        struct_literal_field: ($) => seq(
+            field("name", $.struct_field_name),
+            optional(seq(":", $._expr)),
+        ),
+
         field_name: ($) => seq($.function_name_segment, optional(seq("::", $.env_def))),
 
         function_call: ($) => seq(
@@ -505,11 +576,11 @@ module.exports = grammar({
 
         call_params: ($) => seq(
             "(",
-            seq($._expr, repeat(seq(
-                ",",
+            optional(seq(
                 $._expr,
-            ))),
-            optional(","),
+                repeat(seq(",", $._expr)),
+                optional(","),
+            )),
             ")",
         ),
 
@@ -521,7 +592,6 @@ module.exports = grammar({
             seq("(", $._base_type, ")"),
             $.tuple_type,
             $.empty_type,
-            $.self_type,
             $.never_type,
         ),
 
@@ -580,6 +650,7 @@ module.exports = grammar({
 
         type_name: ($) => choice(
             prec.left($.builtin_type),
+            prec.left($.self_type),
             prec.left($._ident),
         ),
 
@@ -629,6 +700,8 @@ module.exports = grammar({
         qual_const: ($) => "const",
         qual_comptime: ($) => "comptime",
         qual_maybe_comptime: ($) => "?comptime",
+        qual_async: ($) => "async",
+        qual_shared: ($) => "shared",
         qual_external: ($) => seq("extern"),
         ref_punct: ($) => "&",
 

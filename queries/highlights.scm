@@ -14,6 +14,7 @@
 "self" @variable.builtin
 (self_type) @type.builtin
 ; "struct" @keyword
+"struct" @keyword
 ; "enum" @keyword
 ; "union" @keyword
 ; "match" @keyword
@@ -23,6 +24,8 @@
 "mod" @keyword.control.import
 "use" @keyword.control.import
 (qual_mut) @keyword.storage.modifier
+(qual_async) @keyword.storage.modifier
+(qual_shared) @keyword.storage.modifier
 ; "pub" @keyword
 "impl" @keyword.function
 "trait" @keyword.function
@@ -52,6 +55,7 @@
     "<="
     ">="
     "=="
+    "!="
 
     "&&"
 
@@ -113,6 +117,9 @@
 ; (method_expr
 ;     (function_name_segment) @function.method)
 (var_func_name) @function
+
+; struct fields (in struct definitions and struct literals)
+(struct_field_name) @variable.other.member
 
 ; comments
 (line_comment) @comment.line

@@ -24,11 +24,11 @@ source = { git="https://github.com/LateinCecer/tree-sitter-edl", rev="..." }
 
 For `rev` insert the id of the most recent commit.
 Then, clone this repo any copy the files in the `queries` folder that end in `.scm` into the `runtime/queries/edl` folder of your Helix config.
-For example, if Helix lives in ~/.config/helix then you'd do
+For example, if Helix lives in `~/.config/helix` then you'd do
 
 ```bash
 git clone https://github.com/LateinCecer/tree-sitter-edl.git
-mkir -R ~/.config/helix/runtime/queries/edl
+mkdir -R ~/.config/helix/runtime/queries/edl
 cp tree-sitter-edl/queries/*.scm ~/.config/helix/runtime/queries/edl/
 ```
 
